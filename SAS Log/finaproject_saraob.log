@@ -1,0 +1,3197 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              282.71k
+      OS Memory           26276.00k
+      Timestamp           05/08/2023 11:16:34 PM
+      Step Count                        24  Switch Count  0
+      Page Faults                       0
+      Page Reclaims                     77
+      Page Swaps                        0
+      Voluntary Context Switches        6
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           0
+      
+
+97         
+98         * Create permanent lib to store data;
+99         libname data "&data";
+NOTE: Libref DATA was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /home/u49497589/BIOS669/Final Project/Data
+100        
+101        * Import stc files;
+102        proc cimport infile="&data/28762-0001-Data.stc" lib=work; run;
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA28762P1
+NOTE: Data set contains 741 variables and 3302 observations. 
+      Logical record length is 5968
+
+2                                                          The SAS System                           Monday, May  8, 2023 07:16:34 PM
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry AMTLEAKF.FORMAT has been imported.
+NOTE: Entry AROUSEDF.FORMAT has been imported.
+NOTE: Entry BACKPROF.FORMAT has been imported.
+NOTE: Entry BCREAS0F.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+NOTE: Entry BODYPAIF.FORMAT has been imported.
+NOTE: Entry BOTHER0F.FORMAT has been imported.
+NOTE: Entry BPTAKENF.FORMAT has been imported.
+NOTE: Entry CHLDCARF.FORMAT has been imported.
+NOTE: Entry COURTESF.FORMAT has been imported.
+NOTE: Entry DAYSLEAF.FORMAT has been imported.
+NOTE: Entry DEGHAPPF.FORMAT has been imported.
+NOTE: Entry DELVR10F.FORMAT has been imported.
+NOTE: Entry DESIRSEF.FORMAT has been imported.
+NOTE: Entry EATMEATF.FORMAT has been imported.
+NOTE: Entry EATSALTF.FORMAT has been imported.
+NOTE: Entry FAITH0FF.FORMAT has been imported.
+NOTE: Entry FLGCV0FF.FORMAT has been imported.
+NOTE: Entry FLOWAMTF.FORMAT has been imported.
+NOTE: Entry FLOWDAYF.FORMAT has been imported.
+NOTE: Entry GAIN10LF.FORMAT has been imported.
+NOTE: Entry GETUPURF.FORMAT has been imported.
+NOTE: Entry GLOBVEGF.FORMAT has been imported.
+NOTE: Entry HARTRT1F.FORMAT has been imported.
+NOTE: Entry HLTHAYRF.FORMAT has been imported.
+NOTE: Entry HPSCMODF.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry IMPORSEF.FORMAT has been imported.
+NOTE: Entry INCOME0F.FORMAT has been imported.
+NOTE: Entry INSUEVMF.FORMAT has been imported.
+NOTE: Entry INTERFRF.FORMAT has been imported.
+NOTE: Entry INTERVAF.FORMAT has been imported.
+NOTE: Entry LANGREAF.FORMAT has been imported.
+NOTE: Entry LANGSPKF.FORMAT has been imported.
+NOTE: Entry LANGUAGF.FORMAT has been imported.
+NOTE: Entry LFATCHSF.FORMAT has been imported.
+NOTE: Entry LGTCHORF.FORMAT has been imported.
+NOTE: Entry LISTEN0F.FORMAT has been imported.
+NOTE: Entry MAINREAF.FORMAT has been imported.
+NOTE: Entry MASTURBF.FORMAT has been imported.
+NOTE: Entry MODCHORF.FORMAT has been imported.
+NOTE: Entry NOGETPRF.FORMAT has been imported.
+NOTE: Entry NOPERIOF.FORMAT has been imported.
+NOTE: Entry NOTILEAF.FORMAT has been imported.
+NOTE: Entry OCCUP0FF.FORMAT has been imported.
+NOTE: Entry OJCALC0F.FORMAT has been imported.
+NOTE: Entry OUTCM10F.FORMAT has been imported.
+NOTE: Entry PAINTRFF.FORMAT has been imported.
+NOTE: Entry PEP0FFFF.FORMAT has been imported.
+NOTE: Entry PHYSPLEF.FORMAT has been imported.
+NOTE: Entry PHYSWORF.FORMAT has been imported.
+NOTE: Entry PRAY0FFF.FORMAT has been imported.
+NOTE: Entry PREGNANF.FORMAT has been imported.
+NOTE: Entry PREPMEAF.FORMAT has been imported.
+NOTE: Entry RACEFFFF.FORMAT has been imported.
+NOTE: Entry RECACTIF.FORMAT has been imported.
+NOTE: Entry RELICOMF.FORMAT has been imported.
+3                                                          The SAS System                           Monday, May  8, 2023 07:16:34 PM
+
+NOTE: Entry RELIPREF.FORMAT has been imported.
+NOTE: Entry SATISFYF.FORMAT has been imported.
+NOTE: Entry SCALE0FF.FORMAT has been imported.
+NOTE: Entry SIT0FFFF.FORMAT has been imported.
+NOTE: Entry SOCIAL0F.FORMAT has been imported.
+NOTE: Entry SOURCOMF.FORMAT has been imported.
+NOTE: Entry SPORT1MF.FORMAT has been imported.
+NOTE: Entry SPORT1WF.FORMAT has been imported.
+NOTE: Entry SPORTS0F.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS0F.FORMAT has been imported.
+NOTE: Entry STIFF0FF.FORMAT has been imported.
+NOTE: Entry SWEATPAF.FORMAT has been imported.
+NOTE: Entry TAKEORDF.FORMAT has been imported.
+NOTE: Entry TAKEVITF.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry TREATBAF.FORMAT has been imported.
+NOTE: Entry TYPNIGHF.FORMAT has been imported.
+NOTE: Entry USUALDAF.FORMAT has been imported.
+NOTE: Entry WALKBIKF.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WATCHTVF.FORMAT has been imported.
+NOTE: Entry WELLDNEF.FORMAT has been imported.
+NOTE: Entry WHOSEX0F.FORMAT has been imported.
+NOTE: Entry WLOSSDTF.FORMAT has been imported.
+NOTE: Entry WTBFR10F.FORMAT has been imported.
+NOTE: Entry YRSONEAF.FORMAT has been imported.
+NOTE: Entry LANGFFQF.FORMATC has been imported.
+NOTE: Entry READSPEF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 87
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.18 seconds
+      user cpu time       0.16 seconds
+      system cpu time     0.02 seconds
+      memory              2591.78k
+      OS Memory           29352.00k
+      Timestamp           05/08/2023 11:16:34 PM
+      Step Count                        25  Switch Count  90
+      Page Faults                       0
+      Page Reclaims                     594
+      Page Swaps                        0
+      Voluntary Context Switches        204
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           41144
+      
+
+103        proc cimport infile="&data/29221-0001-Data.stc" lib=work; run;
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA29221P1
+NOTE: Data set contains 576 variables and 2881 observations. 
+      Logical record length is 4864
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry AMTLEAKF.FORMAT has been imported.
+NOTE: Entry AROUSEDF.FORMAT has been imported.
+4                                                          The SAS System                           Monday, May  8, 2023 07:16:34 PM
+
+NOTE: Entry AWAREBOF.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+NOTE: Entry BODYPAIF.FORMAT has been imported.
+NOTE: Entry BOTHER1F.FORMAT has been imported.
+NOTE: Entry BROKEBOF.FORMAT has been imported.
+NOTE: Entry CHORES1F.FORMAT has been imported.
+NOTE: Entry CONTCT1F.FORMAT has been imported.
+NOTE: Entry CONTETHF.FORMAT has been imported.
+NOTE: Entry CONTROLF.FORMAT has been imported.
+NOTE: Entry COURTESF.FORMAT has been imported.
+NOTE: Entry DAYSLEAF.FORMAT has been imported.
+NOTE: Entry DESCPERF.FORMAT has been imported.
+NOTE: Entry DESIRSEF.FORMAT has been imported.
+NOTE: Entry ESTRDA1F.FORMAT has been imported.
+NOTE: Entry EXPBESTF.FORMAT has been imported.
+NOTE: Entry GETUPURF.FORMAT has been imported.
+NOTE: Entry GLASBEEF.FORMAT has been imported.
+NOTE: Entry GRAYHAIF.FORMAT has been imported.
+NOTE: Entry HOURSPAF.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry IMPORSEF.FORMAT has been imported.
+NOTE: Entry INCOME1F.FORMAT has been imported.
+NOTE: Entry INTERFRF.FORMAT has been imported.
+NOTE: Entry LANGINTF.FORMAT has been imported.
+NOTE: Entry LISTEN1F.FORMAT has been imported.
+NOTE: Entry MARITALF.FORMAT has been imported.
+NOTE: Entry MASTURBF.FORMAT has been imported.
+NOTE: Entry MULTVITF.FORMAT has been imported.
+NOTE: Entry NGHBRETF.FORMAT has been imported.
+NOTE: Entry ONCEADAF.FORMAT has been imported.
+NOTE: Entry ONEOVARF.FORMAT has been imported.
+NOTE: Entry OUTCOMEF.FORMAT has been imported.
+NOTE: Entry OVERHLTF.FORMAT has been imported.
+NOTE: Entry PEP1FFFF.FORMAT has been imported.
+NOTE: Entry PHYSACTF.FORMAT has been imported.
+NOTE: Entry PHYSPLEF.FORMAT has been imported.
+NOTE: Entry PREGNANF.FORMAT has been imported.
+NOTE: Entry PRIMREAF.FORMAT has been imported.
+NOTE: Entry QLTYLIFF.FORMAT has been imported.
+NOTE: Entry RACEFFFF.FORMAT has been imported.
+NOTE: Entry REWRDJOF.FORMAT has been imported.
+NOTE: Entry ROTAT21F.FORMAT has been imported.
+NOTE: Entry SATISFYF.FORMAT has been imported.
+NOTE: Entry SCALE1FF.FORMAT has been imported.
+NOTE: Entry SMOKER1F.FORMAT has been imported.
+NOTE: Entry SOCIAL1F.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS1F.FORMAT has been imported.
+NOTE: Entry STEADY1F.FORMAT has been imported.
+NOTE: Entry STIFF1FF.FORMAT has been imported.
+NOTE: Entry SWEATPAF.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry TYPNIGHF.FORMAT has been imported.
+NOTE: Entry VLNTHR1F.FORMAT has been imported.
+NOTE: Entry WALKBIKF.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WATCHTVF.FORMAT has been imported.
+5                                                          The SAS System                           Monday, May  8, 2023 07:16:34 PM
+
+NOTE: Entry SITESPEF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 61
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.15 seconds
+      user cpu time       0.13 seconds
+      system cpu time     0.02 seconds
+      memory              2365.12k
+      OS Memory           29352.00k
+      Timestamp           05/08/2023 11:16:34 PM
+      Step Count                        26  Switch Count  64
+      Page Faults                       0
+      Page Reclaims                     144
+      Page Swaps                        0
+      Voluntary Context Switches        148
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           29048
+      
+
+104        proc cimport infile="&data/29401-0001-Data.stc" lib=work; run;
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA29401P1
+NOTE: Data set contains 551 variables and 2748 observations. 
+      Logical record length is 4592
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry AMTLEAKF.FORMAT has been imported.
+NOTE: Entry AROUSEDF.FORMAT has been imported.
+NOTE: Entry AWAREBOF.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+NOTE: Entry BODYPAIF.FORMAT has been imported.
+NOTE: Entry BOTHER2F.FORMAT has been imported.
+NOTE: Entry BROKEBOF.FORMAT has been imported.
+NOTE: Entry CHORES2F.FORMAT has been imported.
+NOTE: Entry CLOSE2FF.FORMAT has been imported.
+NOTE: Entry CONTROLF.FORMAT has been imported.
+NOTE: Entry COURTESF.FORMAT has been imported.
+NOTE: Entry DAYSLEAF.FORMAT has been imported.
+NOTE: Entry DESCPERF.FORMAT has been imported.
+NOTE: Entry DESIRSEF.FORMAT has been imported.
+NOTE: Entry ENCOURAF.FORMAT has been imported.
+NOTE: Entry ESTRDA1F.FORMAT has been imported.
+NOTE: Entry FLGINTVF.FORMAT has been imported.
+NOTE: Entry GETUPURF.FORMAT has been imported.
+NOTE: Entry GLASBEEF.FORMAT has been imported.
+NOTE: Entry HOURSPAF.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry IMPORSEF.FORMAT has been imported.
+NOTE: Entry INCOME2F.FORMAT has been imported.
+NOTE: Entry INTERFRF.FORMAT has been imported.
+NOTE: Entry LANGINTF.FORMAT has been imported.
+NOTE: Entry LISTEN2F.FORMAT has been imported.
+NOTE: Entry MARITALF.FORMAT has been imported.
+NOTE: Entry MASTURBF.FORMAT has been imported.
+NOTE: Entry MULTVITF.FORMAT has been imported.
+NOTE: Entry ONCEADAF.FORMAT has been imported.
+NOTE: Entry ONEOVARF.FORMAT has been imported.
+6                                                          The SAS System                           Monday, May  8, 2023 07:16:34 PM
+
+NOTE: Entry OUTCOMEF.FORMAT has been imported.
+NOTE: Entry OVERHLTF.FORMAT has been imported.
+NOTE: Entry PAINTRFF.FORMAT has been imported.
+NOTE: Entry PEP2FFFF.FORMAT has been imported.
+NOTE: Entry PHYSACTF.FORMAT has been imported.
+NOTE: Entry PHYSPLEF.FORMAT has been imported.
+NOTE: Entry PREGNANF.FORMAT has been imported.
+NOTE: Entry PRIMREAF.FORMAT has been imported.
+NOTE: Entry RACEFFFF.FORMAT has been imported.
+NOTE: Entry REWRDJOF.FORMAT has been imported.
+NOTE: Entry SATISFYF.FORMAT has been imported.
+NOTE: Entry SCALE2FF.FORMAT has been imported.
+NOTE: Entry SOCIAL2F.FORMAT has been imported.
+NOTE: Entry SPECIALF.FORMAT has been imported.
+NOTE: Entry SPORTS2F.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS2F.FORMAT has been imported.
+NOTE: Entry STIFF2FF.FORMAT has been imported.
+NOTE: Entry SWEATPAF.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry TYPEPRAF.FORMAT has been imported.
+NOTE: Entry TYPNIGHF.FORMAT has been imported.
+NOTE: Entry WALKBIKF.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WATCHTVF.FORMAT has been imported.
+NOTE: Entry SITESPEF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 58
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.13 seconds
+      user cpu time       0.12 seconds
+      system cpu time     0.01 seconds
+      memory              2352.40k
+      OS Memory           29352.00k
+      Timestamp           05/08/2023 11:16:34 PM
+      Step Count                        27  Switch Count  61
+      Page Faults                       0
+      Page Reclaims                     139
+      Page Swaps                        0
+      Voluntary Context Switches        135
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           25648
+      
+
+105        proc cimport infile="&data/29701-0001-Data.stc" lib=work; run;
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA29701P1
+NOTE: Data set contains 627 variables and 2709 observations. 
+      Logical record length is 5264
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry AMTLEAKF.FORMAT has been imported.
+NOTE: Entry AROUSEDF.FORMAT has been imported.
+NOTE: Entry AWAREBOF.FORMAT has been imported.
+NOTE: Entry BEDTIMAF.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+7                                                          The SAS System                           Monday, May  8, 2023 07:16:35 PM
+
+NOTE: Entry BODYPAIF.FORMAT has been imported.
+NOTE: Entry BOTHER3F.FORMAT has been imported.
+NOTE: Entry BROKEBOF.FORMAT has been imported.
+NOTE: Entry CARING3F.FORMAT has been imported.
+NOTE: Entry CHORES3F.FORMAT has been imported.
+NOTE: Entry CLOSE3FF.FORMAT has been imported.
+NOTE: Entry CONTROLF.FORMAT has been imported.
+NOTE: Entry COURTESF.FORMAT has been imported.
+NOTE: Entry CRPRESUF.FORMAT has been imported.
+NOTE: Entry DAYSLEAF.FORMAT has been imported.
+NOTE: Entry DESCPERF.FORMAT has been imported.
+NOTE: Entry DESIRSEF.FORMAT has been imported.
+NOTE: Entry ENCOURAF.FORMAT has been imported.
+NOTE: Entry ENTHUS3F.FORMAT has been imported.
+NOTE: Entry ESTRDA1F.FORMAT has been imported.
+NOTE: Entry FACRESUF.FORMAT has been imported.
+NOTE: Entry FLGSAAVF.FORMAT has been imported.
+NOTE: Entry GETUPURF.FORMAT has been imported.
+NOTE: Entry GLASBEEF.FORMAT has been imported.
+NOTE: Entry GLUCRESF.FORMAT has been imported.
+NOTE: Entry HOURSPAF.FORMAT has been imported.
+NOTE: Entry HRSACT1F.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry IMPORSEF.FORMAT has been imported.
+NOTE: Entry INCOME3F.FORMAT has been imported.
+NOTE: Entry INTERFRF.FORMAT has been imported.
+NOTE: Entry LANGINTF.FORMAT has been imported.
+NOTE: Entry LISTEN3F.FORMAT has been imported.
+NOTE: Entry MARITALF.FORMAT has been imported.
+NOTE: Entry MASTURBF.FORMAT has been imported.
+NOTE: Entry MDTALK3F.FORMAT has been imported.
+NOTE: Entry MEALS3FF.FORMAT has been imported.
+NOTE: Entry MODERATF.FORMAT has been imported.
+NOTE: Entry MTHSAC1F.FORMAT has been imported.
+NOTE: Entry MULTVITF.FORMAT has been imported.
+NOTE: Entry ONCEADAF.FORMAT has been imported.
+NOTE: Entry ONEOVARF.FORMAT has been imported.
+NOTE: Entry OUTCOMEF.FORMAT has been imported.
+NOTE: Entry OVERHLTF.FORMAT has been imported.
+NOTE: Entry PAINTRFF.FORMAT has been imported.
+NOTE: Entry PEP3FFFF.FORMAT has been imported.
+NOTE: Entry PHYSACTF.FORMAT has been imported.
+NOTE: Entry PHYSPLEF.FORMAT has been imported.
+NOTE: Entry PHYSWORF.FORMAT has been imported.
+NOTE: Entry PREGNANF.FORMAT has been imported.
+NOTE: Entry PRIMREAF.FORMAT has been imported.
+NOTE: Entry QLTYLIFF.FORMAT has been imported.
+NOTE: Entry RACEFFFF.FORMAT has been imported.
+NOTE: Entry RATEIN1F.FORMAT has been imported.
+NOTE: Entry REWRDJOF.FORMAT has been imported.
+NOTE: Entry ROUTNCHF.FORMAT has been imported.
+NOTE: Entry SATISFYF.FORMAT has been imported.
+NOTE: Entry SCALE3FF.FORMAT has been imported.
+NOTE: Entry SLEEPQLF.FORMAT has been imported.
+NOTE: Entry SOCIAL3F.FORMAT has been imported.
+NOTE: Entry SPECIALF.FORMAT has been imported.
+NOTE: Entry SPORTS3F.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+8                                                          The SAS System                           Monday, May  8, 2023 07:16:35 PM
+
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS3F.FORMAT has been imported.
+NOTE: Entry STIFF3FF.FORMAT has been imported.
+NOTE: Entry SWEATPAF.FORMAT has been imported.
+NOTE: Entry TOOCOLDF.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry TYPEPRAF.FORMAT has been imported.
+NOTE: Entry TYPNIGHF.FORMAT has been imported.
+NOTE: Entry WALKBIKF.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WATCHTVF.FORMAT has been imported.
+NOTE: Entry WORKTIRF.FORMAT has been imported.
+NOTE: Entry WRKACTAF.FORMAT has been imported.
+NOTE: Entry RELAT23F.FORMATC has been imported.
+NOTE: Entry SITESPEF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 78
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.16 seconds
+      user cpu time       0.15 seconds
+      system cpu time     0.01 seconds
+      memory              2347.87k
+      OS Memory           29352.00k
+      Timestamp           05/08/2023 11:16:35 PM
+      Step Count                        28  Switch Count  81
+      Page Faults                       0
+      Page Reclaims                     140
+      Page Swaps                        0
+      Voluntary Context Switches        175
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           29328
+      
+
+106        proc cimport infile="&data/30142-0001-Data.stc" lib=work; run;
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA30142P1
+NOTE: Data set contains 675 variables and 2679 observations. 
+      Logical record length is 5616
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry AMTLEAKF.FORMAT has been imported.
+NOTE: Entry AROUSEDF.FORMAT has been imported.
+NOTE: Entry BCREAS4F.FORMAT has been imported.
+NOTE: Entry BEDTIMAF.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+NOTE: Entry BODYPAIF.FORMAT has been imported.
+NOTE: Entry BOTHER4F.FORMAT has been imported.
+NOTE: Entry BROKEBOF.FORMAT has been imported.
+NOTE: Entry CEREACAF.FORMAT has been imported.
+NOTE: Entry CHORES4F.FORMAT has been imported.
+NOTE: Entry CLOSKNIF.FORMAT has been imported.
+NOTE: Entry COMFORTF.FORMAT has been imported.
+NOTE: Entry CONTROLF.FORMAT has been imported.
+NOTE: Entry DAYSLEAF.FORMAT has been imported.
+NOTE: Entry DESCPERF.FORMAT has been imported.
+NOTE: Entry DESIRSEF.FORMAT has been imported.
+NOTE: Entry DISCTREF.FORMAT has been imported.
+9                                                          The SAS System                           Monday, May  8, 2023 07:16:35 PM
+
+NOTE: Entry ENTHUS4F.FORMAT has been imported.
+NOTE: Entry ESTRDA1F.FORMAT has been imported.
+NOTE: Entry FLGSAAVF.FORMAT has been imported.
+NOTE: Entry GETUPURF.FORMAT has been imported.
+NOTE: Entry GLASBEEF.FORMAT has been imported.
+NOTE: Entry HIVAIDSF.FORMAT has been imported.
+NOTE: Entry HOURSPAF.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry IMEDTHRF.FORMAT has been imported.
+NOTE: Entry IMPORSEF.FORMAT has been imported.
+NOTE: Entry INCOME4F.FORMAT has been imported.
+NOTE: Entry LANGINTF.FORMAT has been imported.
+NOTE: Entry LEAKBOTF.FORMAT has been imported.
+NOTE: Entry LENGCYLF.FORMAT has been imported.
+NOTE: Entry LISTEN4F.FORMAT has been imported.
+NOTE: Entry MARITALF.FORMAT has been imported.
+NOTE: Entry MASTURBF.FORMAT has been imported.
+NOTE: Entry MEN10YRF.FORMAT has been imported.
+NOTE: Entry NO30SLEF.FORMAT has been imported.
+NOTE: Entry ONCEADAF.FORMAT has been imported.
+NOTE: Entry ONEOVARF.FORMAT has been imported.
+NOTE: Entry OUTCOMEF.FORMAT has been imported.
+NOTE: Entry OVERHLTF.FORMAT has been imported.
+NOTE: Entry PAINTRFF.FORMAT has been imported.
+NOTE: Entry PCHNJOBF.FORMAT has been imported.
+NOTE: Entry PEP4FFFF.FORMAT has been imported.
+NOTE: Entry PHYSPLEF.FORMAT has been imported.
+NOTE: Entry POSITIVF.FORMAT has been imported.
+NOTE: Entry PREGNANF.FORMAT has been imported.
+NOTE: Entry PROFDEGF.FORMAT has been imported.
+NOTE: Entry PROVSPCF.FORMAT has been imported.
+NOTE: Entry PROVTIMF.FORMAT has been imported.
+NOTE: Entry QLTYLIFF.FORMAT has been imported.
+NOTE: Entry RACEFFFF.FORMAT has been imported.
+NOTE: Entry REWRDJOF.FORMAT has been imported.
+NOTE: Entry ROLE4FFF.FORMAT has been imported.
+NOTE: Entry SATISFYF.FORMAT has been imported.
+NOTE: Entry SCALE4FF.FORMAT has been imported.
+NOTE: Entry SDMTSTAF.FORMAT has been imported.
+NOTE: Entry SLEEPQLF.FORMAT has been imported.
+NOTE: Entry SOYPROTF.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS4F.FORMAT has been imported.
+NOTE: Entry STEADPEF.FORMAT has been imported.
+NOTE: Entry STIFF4FF.FORMAT has been imported.
+NOTE: Entry SWEATPAF.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry V_ACTI4F.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WATCHTVF.FORMAT has been imported.
+NOTE: Entry BCRES_SF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 69
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.16 seconds
+      user cpu time       0.15 seconds
+      system cpu time     0.02 seconds
+10                                                         The SAS System                           Monday, May  8, 2023 07:16:35 PM
+
+      memory              2411.87k
+      OS Memory           29352.00k
+      Timestamp           05/08/2023 11:16:35 PM
+      Step Count                        29  Switch Count  72
+      Page Faults                       0
+      Page Reclaims                     153
+      Page Swaps                        0
+      Voluntary Context Switches        166
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           30472
+      
+
+107        proc cimport infile="&data/30501-0001-Data.stc" lib=work; run;
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA30501P1
+NOTE: Data set contains 703 variables and 2617 observations. 
+      Logical record length is 5664
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry AROUSEDF.FORMAT has been imported.
+NOTE: Entry BCREAS5F.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+NOTE: Entry BOTHER5F.FORMAT has been imported.
+NOTE: Entry BROKEBOF.FORMAT has been imported.
+NOTE: Entry CARING5F.FORMAT has been imported.
+NOTE: Entry CEREACAF.FORMAT has been imported.
+NOTE: Entry CONTROLF.FORMAT has been imported.
+NOTE: Entry DAYSLEAF.FORMAT has been imported.
+NOTE: Entry DESCPERF.FORMAT has been imported.
+NOTE: Entry DESIRSEF.FORMAT has been imported.
+NOTE: Entry ESTRDA1F.FORMAT has been imported.
+NOTE: Entry FLGSAAVF.FORMAT has been imported.
+NOTE: Entry GETUPURF.FORMAT has been imported.
+NOTE: Entry HOURSPAF.FORMAT has been imported.
+NOTE: Entry HRSACT1F.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry INCOME5F.FORMAT has been imported.
+NOTE: Entry LANGINTF.FORMAT has been imported.
+NOTE: Entry LENGCYLF.FORMAT has been imported.
+NOTE: Entry LISTEN5F.FORMAT has been imported.
+NOTE: Entry MARITALF.FORMAT has been imported.
+NOTE: Entry MASTURBF.FORMAT has been imported.
+NOTE: Entry MDTALK5F.FORMAT has been imported.
+NOTE: Entry MEALS5FF.FORMAT has been imported.
+NOTE: Entry MEN6MOSF.FORMAT has been imported.
+NOTE: Entry MODERATF.FORMAT has been imported.
+NOTE: Entry MTHSAC1F.FORMAT has been imported.
+NOTE: Entry NERVES5F.FORMAT has been imported.
+NOTE: Entry ONEOVARF.FORMAT has been imported.
+NOTE: Entry OUTCOMEF.FORMAT has been imported.
+NOTE: Entry OVERHLTF.FORMAT has been imported.
+NOTE: Entry PEP5FFFF.FORMAT has been imported.
+NOTE: Entry PHYSACTF.FORMAT has been imported.
+NOTE: Entry PREGNANF.FORMAT has been imported.
+NOTE: Entry PROFDEGF.FORMAT has been imported.
+NOTE: Entry PROVSPCF.FORMAT has been imported.
+NOTE: Entry PROVTIMF.FORMAT has been imported.
+11                                                         The SAS System                           Monday, May  8, 2023 07:16:35 PM
+
+NOTE: Entry RACEFFFF.FORMAT has been imported.
+NOTE: Entry RATEIN1F.FORMAT has been imported.
+NOTE: Entry REWRDJOF.FORMAT has been imported.
+NOTE: Entry ROUTNCHF.FORMAT has been imported.
+NOTE: Entry SATISFYF.FORMAT has been imported.
+NOTE: Entry SCALE5FF.FORMAT has been imported.
+NOTE: Entry SLEEPQLF.FORMAT has been imported.
+NOTE: Entry SOYPROTF.FORMAT has been imported.
+NOTE: Entry SPORTS5F.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS5F.FORMAT has been imported.
+NOTE: Entry STIFF5FF.FORMAT has been imported.
+NOTE: Entry SWEATPAF.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry WALKBIKF.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WATCHTVF.FORMAT has been imported.
+NOTE: Entry EATSALTF.FORMATC has been imported.
+NOTE: Entry GLOBVEGF.FORMATC has been imported.
+NOTE: Entry LANGFFQF.FORMATC has been imported.
+NOTE: Entry LANGSPKF.FORMATC has been imported.
+NOTE: Entry LFATCHSF.FORMATC has been imported.
+NOTE: Entry OJCALC5F.FORMATC has been imported.
+NOTE: Entry TAKEVITF.FORMATC has been imported.
+NOTE: Entry WELLDNEF.FORMATC has been imported.
+NOTE: Entry WLOSSDTF.FORMATC has been imported.
+NOTE: Entry YRSONEAF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 66
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.17 seconds
+      user cpu time       0.15 seconds
+      system cpu time     0.02 seconds
+      memory              2374.75k
+      OS Memory           29352.00k
+      Timestamp           05/08/2023 11:16:35 PM
+      Step Count                        30  Switch Count  69
+      Page Faults                       0
+      Page Reclaims                     138
+      Page Swaps                        0
+      Voluntary Context Switches        150
+      Involuntary Context Switches      1
+      Block Input Operations            0
+      Block Output Operations           29880
+      
+
+108        proc cimport infile="&data/31181-0001-Data.stc" lib=work; run;
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA31181P1
+NOTE: Data set contains 948 variables and 2448 observations. 
+      Logical record length is 8720
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry ABILITYF.FORMAT has been imported.
+NOTE: Entry AROUSEDF.FORMAT has been imported.
+NOTE: Entry BCREAS6F.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+12                                                         The SAS System                           Monday, May  8, 2023 07:16:35 PM
+
+NOTE: Entry BODYPAIF.FORMAT has been imported.
+NOTE: Entry BOTHER6F.FORMAT has been imported.
+NOTE: Entry BROKEBOF.FORMAT has been imported.
+NOTE: Entry CEREACAF.FORMAT has been imported.
+NOTE: Entry CONDRAWF.FORMAT has been imported.
+NOTE: Entry CONTROLF.FORMAT has been imported.
+NOTE: Entry DAYSLEAF.FORMAT has been imported.
+NOTE: Entry DESCPERF.FORMAT has been imported.
+NOTE: Entry DESIRSEF.FORMAT has been imported.
+NOTE: Entry DIGIT1AF.FORMAT has been imported.
+NOTE: Entry ESTRDA1F.FORMAT has been imported.
+NOTE: Entry FINAN1YF.FORMAT has been imported.
+NOTE: Entry FLGCOGVF.FORMAT has been imported.
+NOTE: Entry FLGSAAVF.FORMAT has been imported.
+NOTE: Entry GETUPURF.FORMAT has been imported.
+NOTE: Entry GLASBEEF.FORMAT has been imported.
+NOTE: Entry HEALSICF.FORMAT has been imported.
+NOTE: Entry HLTHAYRF.FORMAT has been imported.
+NOTE: Entry HOMEOWNF.FORMAT has been imported.
+NOTE: Entry HOURSPAF.FORMAT has been imported.
+NOTE: Entry HOW_HARF.FORMAT has been imported.
+NOTE: Entry HRSACT1F.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry IMEDTHRF.FORMAT has been imported.
+NOTE: Entry IMPORSEF.FORMAT has been imported.
+NOTE: Entry INCOME6F.FORMAT has been imported.
+NOTE: Entry INSDRCOF.FORMAT has been imported.
+NOTE: Entry INTERFRF.FORMAT has been imported.
+NOTE: Entry INTRPANF.FORMAT has been imported.
+NOTE: Entry LANGINTF.FORMAT has been imported.
+NOTE: Entry LENGCYLF.FORMAT has been imported.
+NOTE: Entry LISTEN6F.FORMAT has been imported.
+NOTE: Entry LOSSINCF.FORMAT has been imported.
+NOTE: Entry MARITALF.FORMAT has been imported.
+NOTE: Entry MASTURBF.FORMAT has been imported.
+NOTE: Entry MDTALK6F.FORMAT has been imported.
+NOTE: Entry MEALS6FF.FORMAT has been imported.
+NOTE: Entry MEN6MOSF.FORMAT has been imported.
+NOTE: Entry MODERATF.FORMAT has been imported.
+NOTE: Entry MTHSAC1F.FORMAT has been imported.
+NOTE: Entry ONCEADAF.FORMAT has been imported.
+NOTE: Entry ONEOVARF.FORMAT has been imported.
+NOTE: Entry OUTCOMEF.FORMAT has been imported.
+NOTE: Entry OVERHLTF.FORMAT has been imported.
+NOTE: Entry PEP6FFFF.FORMAT has been imported.
+NOTE: Entry PHYSACTF.FORMAT has been imported.
+NOTE: Entry PHYSWORF.FORMAT has been imported.
+NOTE: Entry PREGNANF.FORMAT has been imported.
+NOTE: Entry PROFDEGF.FORMAT has been imported.
+NOTE: Entry PROVSPCF.FORMAT has been imported.
+NOTE: Entry PROVTIMF.FORMAT has been imported.
+NOTE: Entry RACEFFFF.FORMAT has been imported.
+NOTE: Entry RATEIN1F.FORMAT has been imported.
+NOTE: Entry REWRDJOF.FORMAT has been imported.
+NOTE: Entry ROUTNCHF.FORMAT has been imported.
+NOTE: Entry SATISFYF.FORMAT has been imported.
+NOTE: Entry SCALE6FF.FORMAT has been imported.
+NOTE: Entry SDMTSTAF.FORMAT has been imported.
+13                                                         The SAS System                           Monday, May  8, 2023 07:16:35 PM
+
+NOTE: Entry SEPINJ6F.FORMAT has been imported.
+NOTE: Entry SEPSAF6F.FORMAT has been imported.
+NOTE: Entry SEPTHR6F.FORMAT has been imported.
+NOTE: Entry SIDE6FFF.FORMAT has been imported.
+NOTE: Entry SLEEPQLF.FORMAT has been imported.
+NOTE: Entry SOYPROTF.FORMAT has been imported.
+NOTE: Entry SPORTS6F.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS6F.FORMAT has been imported.
+NOTE: Entry STIFF6FF.FORMAT has been imported.
+NOTE: Entry SWEATPAF.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry VLNTHR1F.FORMAT has been imported.
+NOTE: Entry V_ACTI6F.FORMAT has been imported.
+NOTE: Entry WALKBIKF.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WATCHTVF.FORMAT has been imported.
+NOTE: Entry WORKTIRF.FORMAT has been imported.
+NOTE: Entry WRKACTAF.FORMAT has been imported.
+NOTE: Entry BCRES_SF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 83
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.21 seconds
+      user cpu time       0.20 seconds
+      system cpu time     0.01 seconds
+      memory              2766.87k
+      OS Memory           29608.00k
+      Timestamp           05/08/2023 11:16:35 PM
+      Step Count                        31  Switch Count  86
+      Page Faults                       0
+      Page Reclaims                     184
+      Page Swaps                        0
+      Voluntary Context Switches        197
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           42872
+      
+
+109        proc cimport infile="&data/31901-0001-Data.stc" lib=work; run;
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA31901P1
+NOTE: Data set contains 1016 variables and 2413 observations. 
+      Logical record length is 9528
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry BCREAS7F.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+NOTE: Entry BOTHER7F.FORMAT has been imported.
+NOTE: Entry BOTHOTFF.FORMAT has been imported.
+NOTE: Entry BROKEBOF.FORMAT has been imported.
+NOTE: Entry CEREACAF.FORMAT has been imported.
+NOTE: Entry CONDRAWF.FORMAT has been imported.
+NOTE: Entry CONTROLF.FORMAT has been imported.
+NOTE: Entry COUGLWKF.FORMAT has been imported.
+NOTE: Entry COURTESF.FORMAT has been imported.
+NOTE: Entry DESCPERF.FORMAT has been imported.
+14                                                         The SAS System                           Monday, May  8, 2023 07:16:35 PM
+
+NOTE: Entry DIGIT1AF.FORMAT has been imported.
+NOTE: Entry ESTRDA1F.FORMAT has been imported.
+NOTE: Entry FACEI17F.FORMAT has been imported.
+NOTE: Entry FLGINTVF.FORMAT has been imported.
+NOTE: Entry FLGSAAVF.FORMAT has been imported.
+NOTE: Entry FUTURE7F.FORMAT has been imported.
+NOTE: Entry GLASBEEF.FORMAT has been imported.
+NOTE: Entry HEIGHT7F.FORMAT has been imported.
+NOTE: Entry HOTFLASF.FORMAT has been imported.
+NOTE: Entry HOURSPAF.FORMAT has been imported.
+NOTE: Entry HOW_HARF.FORMAT has been imported.
+NOTE: Entry HPSCMODF.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry HTSELF7F.FORMAT has been imported.
+NOTE: Entry IMEDTHRF.FORMAT has been imported.
+NOTE: Entry INCOME7F.FORMAT has been imported.
+NOTE: Entry INTRPANF.FORMAT has been imported.
+NOTE: Entry LANGINTF.FORMAT has been imported.
+NOTE: Entry LEKAMNTF.FORMAT has been imported.
+NOTE: Entry LEKBOTHF.FORMAT has been imported.
+NOTE: Entry LEKDAYSF.FORMAT has been imported.
+NOTE: Entry LENGCYLF.FORMAT has been imported.
+NOTE: Entry LRXMED7F.FORMAT has been imported.
+NOTE: Entry MARITALF.FORMAT has been imported.
+NOTE: Entry MDTALK7F.FORMAT has been imported.
+NOTE: Entry ONCEADAF.FORMAT has been imported.
+NOTE: Entry ONEOVARF.FORMAT has been imported.
+NOTE: Entry OUTCOMEF.FORMAT has been imported.
+NOTE: Entry OVERHLTF.FORMAT has been imported.
+NOTE: Entry PREGNANF.FORMAT has been imported.
+NOTE: Entry PRGNAN7F.FORMAT has been imported.
+NOTE: Entry PROFDEGF.FORMAT has been imported.
+NOTE: Entry PROVSPCF.FORMAT has been imported.
+NOTE: Entry PROVTIMF.FORMAT has been imported.
+NOTE: Entry PSITECAF.FORMAT has been imported.
+NOTE: Entry QLTYLIFF.FORMAT has been imported.
+NOTE: Entry RACEFFFF.FORMAT has been imported.
+NOTE: Entry RLATE17F.FORMAT has been imported.
+NOTE: Entry SCALE7FF.FORMAT has been imported.
+NOTE: Entry SDMTADMF.FORMAT has been imported.
+NOTE: Entry SDMTSTAF.FORMAT has been imported.
+NOTE: Entry SIDE7FFF.FORMAT has been imported.
+NOTE: Entry SLEEPQLF.FORMAT has been imported.
+NOTE: Entry SOYPROTF.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS7F.FORMAT has been imported.
+NOTE: Entry STEADPEF.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry VLNTHR1F.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WTSELF7F.FORMAT has been imported.
+NOTE: Entry BCRES_SF.FORMATC has been imported.
+NOTE: Entry BONES17F.FORMATC has been imported.
+NOTE: Entry LEAKORSF.FORMATC has been imported.
+NOTE: Entry SEX17FFF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 67
+
+15                                                         The SAS System                           Monday, May  8, 2023 07:16:35 PM
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.20 seconds
+      user cpu time       0.19 seconds
+      system cpu time     0.02 seconds
+      memory              2784.12k
+      OS Memory           29608.00k
+      Timestamp           05/08/2023 11:16:35 PM
+      Step Count                        32  Switch Count  70
+      Page Faults                       0
+      Page Reclaims                     151
+      Page Swaps                        0
+      Voluntary Context Switches        153
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           48072
+      
+
+110        proc cimport infile="&data/32122-0001-Data.stc" lib=work; run;
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA32122P1
+NOTE: Data set contains 1055 variables and 2278 observations. 
+      Logical record length is 9832
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry AROUSEDF.FORMAT has been imported.
+NOTE: Entry BCREAS8F.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+NOTE: Entry BODYPAIF.FORMAT has been imported.
+NOTE: Entry BOTHER8F.FORMAT has been imported.
+NOTE: Entry BOTHOTFF.FORMAT has been imported.
+NOTE: Entry BROKEBOF.FORMAT has been imported.
+NOTE: Entry CEREACAF.FORMAT has been imported.
+NOTE: Entry CONDRAWF.FORMAT has been imported.
+NOTE: Entry CONTROLF.FORMAT has been imported.
+NOTE: Entry COUGLWKF.FORMAT has been imported.
+NOTE: Entry DESCPERF.FORMAT has been imported.
+NOTE: Entry DESIRSEF.FORMAT has been imported.
+NOTE: Entry DIGIT1AF.FORMAT has been imported.
+NOTE: Entry ESTRDA1F.FORMAT has been imported.
+NOTE: Entry FACEADMF.FORMAT has been imported.
+NOTE: Entry FACEI18F.FORMAT has been imported.
+NOTE: Entry FLGSAAVF.FORMAT has been imported.
+NOTE: Entry GLASBEEF.FORMAT has been imported.
+NOTE: Entry HEALSICF.FORMAT has been imported.
+NOTE: Entry HLTHAYRF.FORMAT has been imported.
+NOTE: Entry HOTFLASF.FORMAT has been imported.
+NOTE: Entry HOURSPAF.FORMAT has been imported.
+NOTE: Entry HOW_HARF.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry HTSELF8F.FORMAT has been imported.
+NOTE: Entry IMEDTHRF.FORMAT has been imported.
+NOTE: Entry IMPORSEF.FORMAT has been imported.
+NOTE: Entry INCOME8F.FORMAT has been imported.
+NOTE: Entry INTERFRF.FORMAT has been imported.
+NOTE: Entry INTRPANF.FORMAT has been imported.
+NOTE: Entry LANGINTF.FORMAT has been imported.
+NOTE: Entry LEKAMNTF.FORMAT has been imported.
+NOTE: Entry LEKDAYSF.FORMAT has been imported.
+16                                                         The SAS System                           Monday, May  8, 2023 07:16:36 PM
+
+NOTE: Entry LENGCYLF.FORMAT has been imported.
+NOTE: Entry LISTEN8F.FORMAT has been imported.
+NOTE: Entry LRXMED8F.FORMAT has been imported.
+NOTE: Entry LSTURINF.FORMAT has been imported.
+NOTE: Entry MARITALF.FORMAT has been imported.
+NOTE: Entry MASTURBF.FORMAT has been imported.
+NOTE: Entry MDTALK8F.FORMAT has been imported.
+NOTE: Entry MEN6MOSF.FORMAT has been imported.
+NOTE: Entry MISSCONF.FORMAT has been imported.
+NOTE: Entry NUMDANDF.FORMAT has been imported.
+NOTE: Entry ONCEADAF.FORMAT has been imported.
+NOTE: Entry ONEOVARF.FORMAT has been imported.
+NOTE: Entry OUTCOMEF.FORMAT has been imported.
+NOTE: Entry OVERHLTF.FORMAT has been imported.
+NOTE: Entry PEP8FFFF.FORMAT has been imported.
+NOTE: Entry PRGNAN8F.FORMAT has been imported.
+NOTE: Entry PROFDEGF.FORMAT has been imported.
+NOTE: Entry PROVSPCF.FORMAT has been imported.
+NOTE: Entry PROVTIMF.FORMAT has been imported.
+NOTE: Entry PSITECAF.FORMAT has been imported.
+NOTE: Entry QLTYLIFF.FORMAT has been imported.
+NOTE: Entry RACEFFFF.FORMAT has been imported.
+NOTE: Entry REWRDJOF.FORMAT has been imported.
+NOTE: Entry RLATE18F.FORMAT has been imported.
+NOTE: Entry SATISFYF.FORMAT has been imported.
+NOTE: Entry SCALE8FF.FORMAT has been imported.
+NOTE: Entry SIDE8FFF.FORMAT has been imported.
+NOTE: Entry SLEEPQLF.FORMAT has been imported.
+NOTE: Entry SOCIAL8F.FORMAT has been imported.
+NOTE: Entry SOYPROTF.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS8F.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry V_ACTI8F.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WTSELF8F.FORMAT has been imported.
+NOTE: Entry BCRES_SF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 72
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.20 seconds
+      user cpu time       0.19 seconds
+      system cpu time     0.01 seconds
+      memory              2814.68k
+      OS Memory           29608.00k
+      Timestamp           05/08/2023 11:16:36 PM
+      Step Count                        33  Switch Count  75
+      Page Faults                       0
+      Page Reclaims                     159
+      Page Swaps                        0
+      Voluntary Context Switches        169
+      Involuntary Context Switches      2
+      Block Input Operations            0
+      Block Output Operations           45768
+      
+
+111        proc cimport infile="&data/32721-0001-Data.stc" lib=work; run;
+17                                                         The SAS System                           Monday, May  8, 2023 07:16:36 PM
+
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA32721P1
+NOTE: Data set contains 1280 variables and 2469 observations. 
+      Logical record length is 11736
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry AWAREBOF.FORMAT has been imported.
+NOTE: Entry BCREAS9F.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+NOTE: Entry BOTHER9F.FORMAT has been imported.
+NOTE: Entry BOTHOTFF.FORMAT has been imported.
+NOTE: Entry BROKEBOF.FORMAT has been imported.
+NOTE: Entry CARING9F.FORMAT has been imported.
+NOTE: Entry CEREACAF.FORMAT has been imported.
+NOTE: Entry COLDCERF.FORMAT has been imported.
+NOTE: Entry CONDRAWF.FORMAT has been imported.
+NOTE: Entry CONTROLF.FORMAT has been imported.
+NOTE: Entry COUGLWKF.FORMAT has been imported.
+NOTE: Entry DESCPERF.FORMAT has been imported.
+NOTE: Entry DIGIT1AF.FORMAT has been imported.
+NOTE: Entry DRKBEERF.FORMAT has been imported.
+NOTE: Entry EATSALTF.FORMAT has been imported.
+NOTE: Entry EFP9FFFF.FORMAT has been imported.
+NOTE: Entry ESTRDA1F.FORMAT has been imported.
+NOTE: Entry FACEADMF.FORMAT has been imported.
+NOTE: Entry FACEI19F.FORMAT has been imported.
+NOTE: Entry FLGSAAVF.FORMAT has been imported.
+NOTE: Entry GLASBEEF.FORMAT has been imported.
+NOTE: Entry GLOBVEGF.FORMAT has been imported.
+NOTE: Entry GRAYHAIF.FORMAT has been imported.
+NOTE: Entry HOTFLASF.FORMAT has been imported.
+NOTE: Entry HOURSPAF.FORMAT has been imported.
+NOTE: Entry HOW_HARF.FORMAT has been imported.
+NOTE: Entry HRSACT1F.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry HTSELF9F.FORMAT has been imported.
+NOTE: Entry ICECREAF.FORMAT has been imported.
+NOTE: Entry IMEDTHRF.FORMAT has been imported.
+NOTE: Entry INCOME9F.FORMAT has been imported.
+NOTE: Entry INSTSHKF.FORMAT has been imported.
+NOTE: Entry INTRPANF.FORMAT has been imported.
+NOTE: Entry LANGINTF.FORMAT has been imported.
+NOTE: Entry LANGSPKF.FORMAT has been imported.
+NOTE: Entry LEKAMNTF.FORMAT has been imported.
+NOTE: Entry LEKDAYSF.FORMAT has been imported.
+NOTE: Entry LENGCYLF.FORMAT has been imported.
+NOTE: Entry LFATCHSF.FORMAT has been imported.
+NOTE: Entry LRXMED9F.FORMAT has been imported.
+NOTE: Entry LSTURINF.FORMAT has been imported.
+NOTE: Entry MAILLOCF.FORMAT has been imported.
+NOTE: Entry MARITALF.FORMAT has been imported.
+NOTE: Entry MDTALK9F.FORMAT has been imported.
+NOTE: Entry MEALS9FF.FORMAT has been imported.
+NOTE: Entry MODERATF.FORMAT has been imported.
+NOTE: Entry MTHSAC1F.FORMAT has been imported.
+NOTE: Entry NUMDANDF.FORMAT has been imported.
+NOTE: Entry OJCALC9F.FORMAT has been imported.
+NOTE: Entry OLD_VALF.FORMAT has been imported.
+18                                                         The SAS System                           Monday, May  8, 2023 07:16:36 PM
+
+NOTE: Entry ONCEADAF.FORMAT has been imported.
+NOTE: Entry ONEOVARF.FORMAT has been imported.
+NOTE: Entry OUTCOMEF.FORMAT has been imported.
+NOTE: Entry OVERHLTF.FORMAT has been imported.
+NOTE: Entry PHYSACTF.FORMAT has been imported.
+NOTE: Entry PHYSWORF.FORMAT has been imported.
+NOTE: Entry PRGNAN9F.FORMAT has been imported.
+NOTE: Entry PROFDEGF.FORMAT has been imported.
+NOTE: Entry PROVSPCF.FORMAT has been imported.
+NOTE: Entry PROVTIMF.FORMAT has been imported.
+NOTE: Entry PSITECAF.FORMAT has been imported.
+NOTE: Entry QLTYLIFF.FORMAT has been imported.
+NOTE: Entry RACEFFFF.FORMAT has been imported.
+NOTE: Entry RATEIN1F.FORMAT has been imported.
+NOTE: Entry RLATE19F.FORMAT has been imported.
+NOTE: Entry ROUTNCHF.FORMAT has been imported.
+NOTE: Entry SALADDRF.FORMAT has been imported.
+NOTE: Entry SCALE9FF.FORMAT has been imported.
+NOTE: Entry SIDE9FFF.FORMAT has been imported.
+NOTE: Entry SLEEPQLF.FORMAT has been imported.
+NOTE: Entry SOYPROTF.FORMAT has been imported.
+NOTE: Entry SPORTS9F.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS9F.FORMAT has been imported.
+NOTE: Entry SWEATPAF.FORMAT has been imported.
+NOTE: Entry TAKEVITF.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry VLNTHR1F.FORMAT has been imported.
+NOTE: Entry WALKBIKF.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WATCHTVF.FORMAT has been imported.
+NOTE: Entry WELLDNEF.FORMAT has been imported.
+NOTE: Entry WLOSSDTF.FORMAT has been imported.
+NOTE: Entry WORKTIRF.FORMAT has been imported.
+NOTE: Entry WRKACTAF.FORMAT has been imported.
+NOTE: Entry WTSELF9F.FORMAT has been imported.
+NOTE: Entry YRSONEAF.FORMAT has been imported.
+NOTE: Entry BCRES_SF.FORMATC has been imported.
+NOTE: Entry BOTASPEF.FORMATC has been imported.
+NOTE: Entry LANGEFPF.FORMATC has been imported.
+NOTE: Entry LANGFFQF.FORMATC has been imported.
+NOTE: Entry SEX19FFF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 95
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.25 seconds
+      user cpu time       0.23 seconds
+      system cpu time     0.03 seconds
+      memory              2977.96k
+      OS Memory           29868.00k
+      Timestamp           05/08/2023 11:16:36 PM
+      Step Count                        34  Switch Count  98
+      Page Faults                       0
+      Page Reclaims                     229
+      Page Swaps                        0
+      Voluntary Context Switches        219
+      Involuntary Context Switches      0
+19                                                         The SAS System                           Monday, May  8, 2023 07:16:36 PM
+
+      Block Input Operations            0
+      Block Output Operations           58712
+      
+
+112        proc cimport infile="&data/32961-0001-Data.stc" lib=work; run;
+
+NOTE: PROC CIMPORT begins to create/update data set WORK.DA32961P1
+NOTE: Data set contains 887 variables and 2245 observations. 
+      Logical record length is 8288
+
+NOTE: PROC CIMPORT begins to create/update catalog WORK.FORMATS
+NOTE: Entry AROUSEDF.FORMAT has been imported.
+NOTE: Entry BCREAS1F.FORMAT has been imported.
+NOTE: Entry BLDRWATF.FORMAT has been imported.
+NOTE: Entry BODYPAIF.FORMAT has been imported.
+NOTE: Entry BOTHER1F.FORMAT has been imported.
+NOTE: Entry BOTHOTFF.FORMAT has been imported.
+NOTE: Entry BROKEBOF.FORMAT has been imported.
+NOTE: Entry CEREACAF.FORMAT has been imported.
+NOTE: Entry CONDRAWF.FORMAT has been imported.
+NOTE: Entry CONTROLF.FORMAT has been imported.
+NOTE: Entry COURTESF.FORMAT has been imported.
+NOTE: Entry DAYSLEAF.FORMAT has been imported.
+NOTE: Entry DESCPERF.FORMAT has been imported.
+NOTE: Entry DESIRSEF.FORMAT has been imported.
+NOTE: Entry DIGIT1AF.FORMAT has been imported.
+NOTE: Entry ESTRDA1F.FORMAT has been imported.
+NOTE: Entry FLGCV10F.FORMAT has been imported.
+NOTE: Entry FLGSAAVF.FORMAT has been imported.
+NOTE: Entry FLGSABVF.FORMAT has been imported.
+NOTE: Entry GLASBEEF.FORMAT has been imported.
+NOTE: Entry GLASWINF.FORMAT has been imported.
+NOTE: Entry HEALSICF.FORMAT has been imported.
+NOTE: Entry HLTHAYRF.FORMAT has been imported.
+NOTE: Entry HOTFLASF.FORMAT has been imported.
+NOTE: Entry HOURSPAF.FORMAT has been imported.
+NOTE: Entry HOW_HARF.FORMAT has been imported.
+NOTE: Entry HTMETHOF.FORMAT has been imported.
+NOTE: Entry HTSELF1F.FORMAT has been imported.
+NOTE: Entry IMEDTHRF.FORMAT has been imported.
+NOTE: Entry IMPORSEF.FORMAT has been imported.
+NOTE: Entry INCOME1F.FORMAT has been imported.
+NOTE: Entry INTERFRF.FORMAT has been imported.
+NOTE: Entry INTRPANF.FORMAT has been imported.
+NOTE: Entry LANGINTF.FORMAT has been imported.
+NOTE: Entry LEKAMNTF.FORMAT has been imported.
+NOTE: Entry LENGCYLF.FORMAT has been imported.
+NOTE: Entry LISTEN1F.FORMAT has been imported.
+NOTE: Entry MAILLOCF.FORMAT has been imported.
+NOTE: Entry MARITALF.FORMAT has been imported.
+NOTE: Entry MASTURBF.FORMAT has been imported.
+NOTE: Entry MDTALK1F.FORMAT has been imported.
+NOTE: Entry MEN6MOSF.FORMAT has been imported.
+NOTE: Entry ONCEADAF.FORMAT has been imported.
+NOTE: Entry ONEOVARF.FORMAT has been imported.
+NOTE: Entry OUTCOMEF.FORMAT has been imported.
+NOTE: Entry OVERHLTF.FORMAT has been imported.
+NOTE: Entry PEP10FFF.FORMAT has been imported.
+20                                                         The SAS System                           Monday, May  8, 2023 07:16:36 PM
+
+NOTE: Entry PRGNAN1F.FORMAT has been imported.
+NOTE: Entry PROFDEGF.FORMAT has been imported.
+NOTE: Entry PROVSPCF.FORMAT has been imported.
+NOTE: Entry PROVTIMF.FORMAT has been imported.
+NOTE: Entry PSITECAF.FORMAT has been imported.
+NOTE: Entry RWRDRELF.FORMAT has been imported.
+NOTE: Entry SATISFYF.FORMAT has been imported.
+NOTE: Entry SCALE10F.FORMAT has been imported.
+NOTE: Entry SDMTSTAF.FORMAT has been imported.
+NOTE: Entry SIDE10FF.FORMAT has been imported.
+NOTE: Entry SLEEPQLF.FORMAT has been imported.
+NOTE: Entry SOCIAL1F.FORMAT has been imported.
+NOTE: Entry SOYPROTF.FORMAT has been imported.
+NOTE: Entry SPSCMODF.FORMAT has been imported.
+NOTE: Entry STARTNEF.FORMAT has been imported.
+NOTE: Entry STATUS1F.FORMAT has been imported.
+NOTE: Entry TRBLSLEF.FORMAT has been imported.
+NOTE: Entry V_ACTI1F.FORMAT has been imported.
+NOTE: Entry WASTMEAF.FORMAT has been imported.
+NOTE: Entry WTSELF1F.FORMAT has been imported.
+NOTE: Entry BCRES_SF.FORMATC has been imported.
+NOTE: Total number of entries processed in catalog WORK.FORMATS: 68
+
+NOTE: PROCEDURE CIMPORT used (Total process time):
+      real time           0.16 seconds
+      user cpu time       0.15 seconds
+      system cpu time     0.02 seconds
+      memory              2723.53k
+      OS Memory           29608.00k
+      Timestamp           05/08/2023 11:16:36 PM
+      Step Count                        35  Switch Count  71
+      Page Faults                       0
+      Page Reclaims                     146
+      Page Swaps                        0
+      Voluntary Context Switches        155
+      Involuntary Context Switches      2
+      Block Input Operations            0
+      Block Output Operations           39192
+      
+
+113        
+114        * Create permanent datasets;
+115        %macro create(dsn=,ref=);
+116        data data.&dsn;
+117        	set &ref;
+118        run;
+119        %mend;
+120        
+121        %create(dsn=baseline,ref=DA28762P1);
+
+NOTE: There were 3302 observations read from the data set WORK.DA28762P1.
+NOTE: The data set DATA.BASELINE has 3302 observations and 741 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.13 seconds
+      user cpu time       0.02 seconds
+      system cpu time     0.04 seconds
+      memory              4865.37k
+      OS Memory           32940.00k
+21                                                         The SAS System                           Monday, May  8, 2023 07:16:36 PM
+
+      Timestamp           05/08/2023 11:16:36 PM
+      Step Count                        36  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     814
+      Page Swaps                        0
+      Voluntary Context Switches        301
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           40712
+      
+
+122        %create(dsn=visit1,ref=DA29221P1);
+
+NOTE: There were 2881 observations read from the data set WORK.DA29221P1.
+NOTE: The data set DATA.VISIT1 has 2881 observations and 576 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.10 seconds
+      user cpu time       0.02 seconds
+      system cpu time     0.02 seconds
+      memory              4433.65k
+      OS Memory           32940.00k
+      Timestamp           05/08/2023 11:16:36 PM
+      Step Count                        37  Switch Count  1
+      Page Faults                       0
+      Page Reclaims                     567
+      Page Swaps                        0
+      Voluntary Context Switches        253
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           28680
+      
+
+123        %create(dsn=visit2,ref=DA29401P1);
+
+NOTE: There were 2748 observations read from the data set WORK.DA29401P1.
+NOTE: The data set DATA.VISIT2 has 2748 observations and 551 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.09 seconds
+      user cpu time       0.02 seconds
+      system cpu time     0.03 seconds
+      memory              4407.53k
+      OS Memory           32940.00k
+      Timestamp           05/08/2023 11:16:36 PM
+      Step Count                        38  Switch Count  1
+      Page Faults                       0
+      Page Reclaims                     529
+      Page Swaps                        0
+      Voluntary Context Switches        242
+      Involuntary Context Switches      0
+      Block Input Operations            32
+      Block Output Operations           25352
+      
+
+124        %create(dsn=visit3,ref=DA29701P1);
+
+NOTE: There were 2709 observations read from the data set WORK.DA29701P1.
+NOTE: The data set DATA.VISIT3 has 2709 observations and 627 variables.
+NOTE: DATA statement used (Total process time):
+22                                                         The SAS System                           Monday, May  8, 2023 07:16:36 PM
+
+      real time           0.11 seconds
+      user cpu time       0.02 seconds
+      system cpu time     0.03 seconds
+      memory              4539.81k
+      OS Memory           32940.00k
+      Timestamp           05/08/2023 11:16:36 PM
+      Step Count                        39  Switch Count  1
+      Page Faults                       0
+      Page Reclaims                     509
+      Page Swaps                        0
+      Voluntary Context Switches        234
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           29192
+      
+
+125        %create(dsn=visit4,ref=DA30142P1);
+
+NOTE: There were 2679 observations read from the data set WORK.DA30142P1.
+NOTE: The data set DATA.VISIT4 has 2679 observations and 675 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.10 seconds
+      user cpu time       0.02 seconds
+      system cpu time     0.03 seconds
+      memory              4592.21k
+      OS Memory           33196.00k
+      Timestamp           05/08/2023 11:16:37 PM
+      Step Count                        40  Switch Count  1
+      Page Faults                       0
+      Page Reclaims                     527
+      Page Swaps                        0
+      Voluntary Context Switches        252
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           30216
+      
+
+126        %create(dsn=visit5,ref=DA30501P1);
+
+NOTE: There were 2617 observations read from the data set WORK.DA30501P1.
+NOTE: The data set DATA.VISIT5 has 2617 observations and 703 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.10 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.03 seconds
+      memory              4481.96k
+      OS Memory           33196.00k
+      Timestamp           05/08/2023 11:16:37 PM
+      Step Count                        41  Switch Count  1
+      Page Faults                       0
+      Page Reclaims                     502
+      Page Swaps                        0
+      Voluntary Context Switches        247
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           29448
+      
+
+23                                                         The SAS System                           Monday, May  8, 2023 07:16:37 PM
+
+127        %create(dsn=visit6,ref=DA31181P1);
+
+NOTE: There were 2448 observations read from the data set WORK.DA31181P1.
+NOTE: The data set DATA.VISIT6 has 2448 observations and 948 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.13 seconds
+      user cpu time       0.03 seconds
+      system cpu time     0.03 seconds
+      memory              5076.46k
+      OS Memory           33452.00k
+      Timestamp           05/08/2023 11:16:37 PM
+      Step Count                        42  Switch Count  1
+      Page Faults                       0
+      Page Reclaims                     573
+      Page Swaps                        0
+      Voluntary Context Switches        350
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           42248
+      
+
+128        %create(dsn=visit7,ref=DA31901P1);
+
+NOTE: There were 2413 observations read from the data set WORK.DA31901P1.
+NOTE: The data set DATA.VISIT7 has 2413 observations and 1016 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.14 seconds
+      user cpu time       0.02 seconds
+      system cpu time     0.05 seconds
+      memory              5026.21k
+      OS Memory           33452.00k
+      Timestamp           05/08/2023 11:16:37 PM
+      Step Count                        43  Switch Count  1
+      Page Faults                       0
+      Page Reclaims                     534
+      Page Swaps                        0
+      Voluntary Context Switches        402
+      Involuntary Context Switches      1
+      Block Input Operations            0
+      Block Output Operations           47880
+      
+
+129        %create(dsn=visit8,ref=DA32122P1);
+
+NOTE: There were 2278 observations read from the data set WORK.DA32122P1.
+NOTE: The data set DATA.VISIT8 has 2278 observations and 1055 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.14 seconds
+      user cpu time       0.02 seconds
+      system cpu time     0.04 seconds
+      memory              4967.31k
+      OS Memory           33452.00k
+      Timestamp           05/08/2023 11:16:37 PM
+      Step Count                        44  Switch Count  1
+      Page Faults                       0
+      Page Reclaims                     525
+      Page Swaps                        0
+      Voluntary Context Switches        374
+24                                                         The SAS System                           Monday, May  8, 2023 07:16:37 PM
+
+      Involuntary Context Switches      2
+      Block Input Operations            32
+      Block Output Operations           45320
+      
+
+130        %create(dsn=visit9,ref=DA32721P1);
+
+NOTE: There were 2469 observations read from the data set WORK.DA32721P1.
+NOTE: The data set DATA.VISIT9 has 2469 observations and 1280 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.17 seconds
+      user cpu time       0.03 seconds
+      system cpu time     0.05 seconds
+      memory              5217.43k
+      OS Memory           33712.00k
+      Timestamp           05/08/2023 11:16:37 PM
+      Step Count                        45  Switch Count  1
+      Page Faults                       0
+      Page Reclaims                     628
+      Page Swaps                        0
+      Voluntary Context Switches        464
+      Involuntary Context Switches      1
+      Block Input Operations            32
+      Block Output Operations           58120
+      
+
+131        %create(dsn=visit10,ref=DA32961P1);
+
+NOTE: There were 2245 observations read from the data set WORK.DA32961P1.
+NOTE: The data set DATA.VISIT10 has 2245 observations and 887 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.12 seconds
+      user cpu time       0.02 seconds
+      system cpu time     0.04 seconds
+      memory              4931.03k
+      OS Memory           33452.00k
+      Timestamp           05/08/2023 11:16:37 PM
+      Step Count                        46  Switch Count  1
+      Page Faults                       0
+      Page Reclaims                     512
+      Page Swaps                        0
+      Voluntary Context Switches        317
+      Involuntary Context Switches      0
+      Block Input Operations            32
+      Block Output Operations           38664
+      
+
+132        
+133        * Create sets of eligible cases only;
+134        %macro eligible(vname=,vnumber=);
+135        
+136        data alds&vnumber;
+137        	set data.&vname (keep=SWANID STATUS&vnumber SYSBP1&vnumber DIABP1&vnumber CRPRESU&vnumber HDLRESU&vnumber
+137      ! CHOLRES&vnumber BMI&vnumber WAIST&vnumber HIP&vnumber GLUCRES&vnumber TRIGRES&vnumber DHAS&vnumber);
+138        	if ^missing(SYSBP1&vnumber) and ^missing(DIABP1&vnumber) and ^missing(CRPRESU&vnumber) and ^missing(HDLRESU&vnumber) and
+138      !  ^missing(CHOLRES&vnumber) and ^missing(BMI&vnumber) and ^missing(GLUCRES&vnumber) and ^missing(TRIGRES&vnumber) and
+138      ! ^missing(DHAS&vnumber) and ^missing(WAIST&vnumber) and ^missing(HIP&vnumber);
+139        	WHRATIO&vnumber = WAIST&vnumber / HIP&vnumber;
+25                                                         The SAS System                           Monday, May  8, 2023 07:16:37 PM
+
+140        	alscore&vnumber = 0; * This is temporary to check which participants will have an al score at ≥2 follow-up visits;
+141        run;
+142        
+143        %mend;
+144        
+145        %eligible(vname=baseline,vnumber=0);
+
+NOTE: There were 3302 observations read from the data set DATA.BASELINE.
+NOTE: The data set WORK.ALDS0 has 2983 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.05 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.01 seconds
+      memory              2564.43k
+      OS Memory           31916.00k
+      Timestamp           05/08/2023 11:16:37 PM
+      Step Count                        47  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     296
+      Page Swaps                        0
+      Voluntary Context Switches        307
+      Involuntary Context Switches      0
+      Block Input Operations            40736
+      Block Output Operations           776
+      
+
+146        %eligible(vname=visit1,vnumber=1);
+
+NOTE: There were 2881 observations read from the data set DATA.VISIT1.
+NOTE: The data set WORK.ALDS1 has 2402 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.03 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.01 seconds
+      memory              2566.18k
+      OS Memory           31916.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        48  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     291
+      Page Swaps                        0
+      Voluntary Context Switches        223
+      Involuntary Context Switches      0
+      Block Input Operations            28704
+      Block Output Operations           776
+      
+
+147        %eligible(vname=visit3,vnumber=3);
+
+NOTE: There were 2709 observations read from the data set DATA.VISIT3.
+NOTE: The data set WORK.ALDS3 has 2095 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.03 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.01 seconds
+      memory              2418.71k
+      OS Memory           31916.00k
+      Timestamp           05/08/2023 11:16:38 PM
+26                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      Step Count                        49  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     292
+      Page Swaps                        0
+      Voluntary Context Switches        217
+      Involuntary Context Switches      0
+      Block Input Operations            29216
+      Block Output Operations           520
+      
+
+148        %eligible(vname=visit4,vnumber=4);
+
+NOTE: There were 2679 observations read from the data set DATA.VISIT4.
+NOTE: The data set WORK.ALDS4 has 2120 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.04 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.01 seconds
+      memory              2428.71k
+      OS Memory           31916.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        50  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     293
+      Page Swaps                        0
+      Voluntary Context Switches        247
+      Involuntary Context Switches      0
+      Block Input Operations            30240
+      Block Output Operations           520
+      
+
+149        %eligible(vname=visit5,vnumber=5);
+
+NOTE: There were 2617 observations read from the data set DATA.VISIT5.
+NOTE: The data set WORK.ALDS5 has 1988 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.04 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.02 seconds
+      memory              2426.21k
+      OS Memory           31916.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        51  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     291
+      Page Swaps                        0
+      Voluntary Context Switches        240
+      Involuntary Context Switches      0
+      Block Input Operations            29472
+      Block Output Operations           520
+      
+
+150        %eligible(vname=visit6,vnumber=6);
+
+NOTE: There were 2448 observations read from the data set DATA.VISIT6.
+NOTE: The data set WORK.ALDS6 has 1925 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.05 seconds
+27                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      user cpu time       0.01 seconds
+      system cpu time     0.02 seconds
+      memory              2466.43k
+      OS Memory           31916.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        52  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     291
+      Page Swaps                        0
+      Voluntary Context Switches        339
+      Involuntary Context Switches      0
+      Block Input Operations            42272
+      Block Output Operations           520
+      
+
+151        %eligible(vname=visit7,vnumber=7);
+
+NOTE: There were 2413 observations read from the data set DATA.VISIT7.
+NOTE: The data set WORK.ALDS7 has 1857 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.06 seconds
+      user cpu time       0.02 seconds
+      system cpu time     0.01 seconds
+      memory              2472.43k
+      OS Memory           31916.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        53  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     290
+      Page Swaps                        0
+      Voluntary Context Switches        380
+      Involuntary Context Switches      0
+      Block Input Operations            47904
+      Block Output Operations           520
+      
+
+152        
+153        * Merge eligible datasets;
+154        data aldsmerge;
+155        	merge alds0 (in=base) alds1 alds3 alds4 alds5 alds6 alds7;
+156        	by swanid;
+157        	if base and ^missing(status0) and status0 ^= 6 and
+158        		sum(^missing(alscore1),^missing(alscore3),^missing(alscore4),^missing(alscore5),^missing(alscore6),^missing(alscore7))
+158      ! >= 2;
+159        run;
+
+NOTE: There were 2983 observations read from the data set WORK.ALDS0.
+NOTE: There were 2402 observations read from the data set WORK.ALDS1.
+NOTE: There were 2095 observations read from the data set WORK.ALDS3.
+NOTE: There were 2120 observations read from the data set WORK.ALDS4.
+NOTE: There were 1988 observations read from the data set WORK.ALDS5.
+NOTE: There were 1925 observations read from the data set WORK.ALDS6.
+NOTE: There were 1857 observations read from the data set WORK.ALDS7.
+NOTE: The data set WORK.ALDSMERGE has 2320 observations and 99 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.01 seconds
+28                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      memory              6085.12k
+      OS Memory           36292.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        54  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     940
+      Page Swaps                        0
+      Voluntary Context Switches        11
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           3848
+      
+
+160        
+161        * Find quantile cut-off values at baseline for eligibles and write to macro vars;
+162        ods exclude all;
+163        proc univariate data=aldsmerge;
+164        	var SYSBP10 DIABP10 CRPRESU0 HDLRESU0 CHOLRES0 BMI0 GLUCRES0 TRIGRES0 DHAS0 WHRATIO0;
+165        	ods output basicmeasures=basestats quantiles=basequantiles;
+166        run;
+
+NOTE: The data set WORK.BASEQUANTILES has 110 observations and 3 variables.
+NOTE: The data set WORK.BASESTATS has 40 observations and 5 variables.
+NOTE: PROCEDURE UNIVARIATE used (Total process time):
+      real time           0.02 seconds
+      user cpu time       0.03 seconds
+      system cpu time     0.00 seconds
+      memory              3405.15k
+      OS Memory           33460.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        55  Switch Count  21
+      Page Faults                       0
+      Page Reclaims                     1168
+      Page Swaps                        0
+      Voluntary Context Switches        122
+      Involuntary Context Switches      1
+      Block Input Operations            0
+      Block Output Operations           1848
+      
+
+167        ods exclude none;
+168        
+169        data _null_;
+170        	set basequantiles;
+171        	if varname ^= "HDLRESU0" and varname ^= "DHAS0" then do;
+172        		%let var = varname;
+173        		if quantile =  "75% Q3" then call symputx(&var,estimate);
+174        	end;
+175        	else if varname = "HDLRESU0" or varname = "DHAS0" then do;
+176        		%let var = varname;
+177        		if quantile = "25% Q1" then call symputx(&var,estimate);
+178        	end;
+179        run;
+
+NOTE: There were 110 observations read from the data set WORK.BASEQUANTILES.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+29                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      system cpu time     0.00 seconds
+      memory              597.65k
+      OS Memory           31912.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        56  Switch Count  0
+      Page Faults                       0
+      Page Reclaims                     75
+      Page Swaps                        0
+      Voluntary Context Switches        0
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           0
+      
+
+180        
+181        * Calculate al score at each visit on final analytic;
+182        %macro alcalc(vnumber=);
+183        
+184        data alscore&vnumber;
+185        	set alds&vnumber;
+186        	if SYSBP1&vnumber > &SYSBP10 then alscore&vnumber = alscore&vnumber + 1;
+187        	if DIABP1&vnumber >= &DIABP10 then alscore&vnumber = alscore&vnumber + 1;
+188        	if CRPRESU&vnumber >= &CRPRESU0 then alscore&vnumber = alscore&vnumber + 1;
+189        	if HDLRESU&vnumber <= &HDLRESU0 then alscore&vnumber = alscore&vnumber + 1;
+190        	if CHOLRES&vnumber >= &CHOLRES0 then alscore&vnumber = alscore&vnumber + 1;
+191        	if BMI&vnumber >= &BMI0 then alscore&vnumber = alscore&vnumber + 1;
+192        	if GLUCRES&vnumber >= &GLUCRES0 then alscore&vnumber = alscore&vnumber + 1;
+193        	if TRIGRES&vnumber >= &TRIGRES0 then alscore&vnumber = alscore&vnumber + 1;
+194        	if DHAS&vnumber <= &DHAS0 then alscore&vnumber = alscore&vnumber + 1;
+195        	if WHRATIO&vnumber >= &WHRATIO0 then alscore&vnumber = alscore&vnumber + 1;
+196        run;
+197        
+198        %mend;
+199        
+200        %alcalc(vnumber=0);
+
+NOTE: There were 2983 observations read from the data set WORK.ALDS0.
+NOTE: The data set WORK.ALSCORE0 has 2983 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              1397.81k
+      OS Memory           32300.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        57  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     134
+      Page Swaps                        0
+      Voluntary Context Switches        9
+      Involuntary Context Switches      1
+      Block Input Operations            0
+      Block Output Operations           776
+      
+
+201        %alcalc(vnumber=1);
+
+NOTE: There were 2402 observations read from the data set WORK.ALDS1.
+30                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+NOTE: The data set WORK.ALSCORE1 has 2402 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              1398.68k
+      OS Memory           32300.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        58  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     135
+      Page Swaps                        0
+      Voluntary Context Switches        13
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           776
+      
+
+202        %alcalc(vnumber=3);
+
+NOTE: There were 2095 observations read from the data set WORK.ALDS3.
+NOTE: The data set WORK.ALSCORE3 has 2095 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              1128.46k
+      OS Memory           32172.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        59  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     100
+      Page Swaps                        0
+      Voluntary Context Switches        9
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           520
+      
+
+203        %alcalc(vnumber=4);
+
+NOTE: There were 2120 observations read from the data set WORK.ALDS4.
+NOTE: The data set WORK.ALSCORE4 has 2120 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              1126.62k
+      OS Memory           32172.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        60  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     104
+      Page Swaps                        0
+      Voluntary Context Switches        9
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           520
+31                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      
+
+204        %alcalc(vnumber=5);
+
+NOTE: There were 1988 observations read from the data set WORK.ALDS5.
+NOTE: The data set WORK.ALSCORE5 has 1988 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              1125.46k
+      OS Memory           32172.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        61  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     100
+      Page Swaps                        0
+      Voluntary Context Switches        15
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           520
+      
+
+205        %alcalc(vnumber=6);
+
+NOTE: There were 1925 observations read from the data set WORK.ALDS6.
+NOTE: The data set WORK.ALSCORE6 has 1925 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              1128.59k
+      OS Memory           32172.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        62  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     100
+      Page Swaps                        0
+      Voluntary Context Switches        10
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           520
+      
+
+206        %alcalc(vnumber=7);
+
+NOTE: There were 1857 observations read from the data set WORK.ALDS7.
+NOTE: The data set WORK.ALSCORE7 has 1857 observations and 15 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              1128.59k
+      OS Memory           32172.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        63  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     100
+32                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      Page Swaps                        0
+      Voluntary Context Switches        11
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           520
+      
+
+207        
+208        * Create final analytic dataset;
+209        data finalanalytic;
+210        	merge alscore0 (in=base) alscore1 alscore3 alscore4 alscore5 alscore6 alscore7;
+211        	by swanid;
+212        	if base and ^missing(status0) and status0 ^= 6 and
+213        		sum(^missing(alscore1),^missing(alscore3),^missing(alscore4),^missing(alscore5),^missing(alscore6),^missing(alscore7))
+213      ! >= 2;
+214        run;
+
+NOTE: There were 2983 observations read from the data set WORK.ALSCORE0.
+NOTE: There were 2402 observations read from the data set WORK.ALSCORE1.
+NOTE: There were 2095 observations read from the data set WORK.ALSCORE3.
+NOTE: There were 2120 observations read from the data set WORK.ALSCORE4.
+NOTE: There were 1988 observations read from the data set WORK.ALSCORE5.
+NOTE: There were 1925 observations read from the data set WORK.ALSCORE6.
+NOTE: There were 1857 observations read from the data set WORK.ALSCORE7.
+NOTE: The data set WORK.FINALANALYTIC has 2320 observations and 99 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              6055.28k
+      OS Memory           37060.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        64  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     871
+      Page Swaps                        0
+      Voluntary Context Switches        9
+      Involuntary Context Switches      1
+      Block Input Operations            0
+      Block Output Operations           3848
+      
+
+215        
+216        * Check derived variables;
+217        proc freq data=finalanalytic;
+218        	title 'Check that AL scores across visits are all within expected range';
+219        	tables alscore0 alscore1 alscore3 alscore4 alscore5 alscore6 alscore7 / missing list;
+220        run;
+
+NOTE: There were 2320 observations read from the data set WORK.FINALANALYTIC.
+NOTE: PROCEDURE FREQ used (Total process time):
+      real time           0.18 seconds
+      user cpu time       0.17 seconds
+      system cpu time     0.01 seconds
+      memory              10920.06k
+      OS Memory           40108.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        65  Switch Count  3
+33                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      Page Faults                       0
+      Page Reclaims                     2288
+      Page Swaps                        0
+      Voluntary Context Switches        17
+      Involuntary Context Switches      1
+      Block Input Operations            0
+      Block Output Operations           352
+      
+
+221        
+222        data checkal;
+223        	set finalanalytic;
+224        	 SYSBP10check=126;
+225        	 DIABP10check=80;
+226        	 CRPRESU0check=4.200;
+227        	 HDLRESU0check=46;
+228        	 CHOLRES0check=213;
+229        	 BMI0check=31.7052;
+230        	 WHRATIO0check=0.842809;
+231        	 GLUCRES0check=98.0;
+232        	 TRIGRES0check=128;
+233        	 DHAS0check=77.000;
+234        run;
+
+NOTE: There were 2320 observations read from the data set WORK.FINALANALYTIC.
+NOTE: The data set WORK.CHECKAL has 2320 observations and 109 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              3610.90k
+      OS Memory           41900.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        66  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     571
+      Page Swaps                        0
+      Voluntary Context Switches        9
+      Involuntary Context Switches      1
+      Block Input Operations            0
+      Block Output Operations           4104
+      
+
+235        
+236        proc print data=checkal (obs=20);
+237        	var swanid alscore0 SYSBP10 SYSBP10check DIABP10 DIABP10check CRPRESU0 CRPRESU0check HDLRESU0 HDLRESU0check
+238        	CHOLRES0 CHOLRES0check BMI0 BMI0check WHRATIO0 WHRATIO0check GLUCRES0 GLUCRES0check
+239        	TRIGRES0 TRIGRES0check DHAS0 DHAS0check;
+240        	where alscore0>0;
+241        run;
+
+NOTE: There were 20 observations read from the data set WORK.CHECKAL.
+      WHERE alscore0>0;
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.18 seconds
+      user cpu time       0.18 seconds
+      system cpu time     0.01 seconds
+      memory              9644.93k
+34                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      OS Memory           48044.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        67  Switch Count  0
+      Page Faults                       0
+      Page Reclaims                     2242
+      Page Swaps                        0
+      Voluntary Context Switches        0
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           104
+      
+
+242        
+243        * Create table 1;
+244        ods exclude all;
+245        proc univariate data=finalanalytic;
+246        	var SYSBP10 DIABP10 CRPRESU0 HDLRESU0 CHOLRES0 BMI0 GLUCRES0 TRIGRES0 DHAS0 WHRATIO0 ALSCORE0;
+247        	ods output basicmeasures=basestats2 quantiles=basequantiles2;
+248        run;
+
+NOTE: The data set WORK.BASEQUANTILES2 has 121 observations and 3 variables.
+NOTE: The data set WORK.BASESTATS2 has 44 observations and 5 variables.
+NOTE: PROCEDURE UNIVARIATE used (Total process time):
+      real time           0.02 seconds
+      user cpu time       0.02 seconds
+      system cpu time     0.01 seconds
+      memory              3213.06k
+      OS Memory           48564.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        68  Switch Count  21
+      Page Faults                       0
+      Page Reclaims                     1000
+      Page Swaps                        0
+      Voluntary Context Switches        135
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           1848
+      
+
+249        ods exclude none;
+250        
+251        proc sort data=basestats2; by varname; run;
+
+NOTE: There were 44 observations read from the data set WORK.BASESTATS2.
+NOTE: The data set WORK.BASESTATS2 has 44 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              792.03k
+      OS Memory           47276.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        69  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     166
+      Page Swaps                        0
+      Voluntary Context Switches        10
+      Involuntary Context Switches      0
+35                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+252        proc sort data=basequantiles2; by varname; run;
+
+NOTE: There were 121 observations read from the data set WORK.BASEQUANTILES2.
+NOTE: The data set WORK.BASEQUANTILES2 has 121 observations and 3 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.01 seconds
+      memory              797.18k
+      OS Memory           47276.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        70  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     115
+      Page Swaps                        0
+      Voluntary Context Switches        14
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+253        
+254        data basestats2;
+255        	set basestats2 (rename=(locvalue=mean varvalue=std));
+256        	if varmeasure='Std Deviation';
+257        	keep varname mean std;
+258        run;
+
+NOTE: There were 44 observations read from the data set WORK.BASESTATS2.
+NOTE: The data set WORK.BASESTATS2 has 11 observations and 3 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              812.21k
+      OS Memory           47532.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        71  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     138
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+259        
+260        data basequantiles2;
+261        	set basequantiles2;
+262        	if quantile="100% Max" or quantile="50% Median" or quantile="0% Min";
+263        run;
+
+NOTE: There were 121 observations read from the data set WORK.BASEQUANTILES2.
+36                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+NOTE: The data set WORK.BASEQUANTILES2 has 33 observations and 3 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              805.81k
+      OS Memory           47532.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        72  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     134
+      Page Swaps                        0
+      Voluntary Context Switches        9
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+264        
+265        proc transpose data=basequantiles2 out=quantrans2; by varname; run;
+
+NOTE: There were 33 observations read from the data set WORK.BASEQUANTILES2.
+NOTE: The data set WORK.QUANTRANS2 has 11 observations and 6 variables.
+NOTE: PROCEDURE TRANSPOSE used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              2833.46k
+      OS Memory           49328.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        73  Switch Count  4
+      Page Faults                       0
+      Page Reclaims                     264
+      Page Swaps                        0
+      Voluntary Context Switches        22
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           528
+      
+
+266        
+267        data table1;
+268        	merge quantrans2 (rename=(col1=max col2=med col3=min) drop=_name_ _label_) basestats2;
+269        	by varname;
+270        	minabr = put(min,6.2);
+271        	maxabr = put(max,6.2);
+272        	stdv = put(std,6.2);
+273        	avg = put(mean,6.2);
+274        	fiftyqt = put(med,6.2);
+275        	minmax = cat(minabr,"-",strip(maxabr));
+276        	if varname = "BMI0" then do; temp=5; cutoff=cat("≥",put(strip(&BMI0),5.2)); end;
+277        	if varname = "CHOLRES0" then do; temp=3; cutoff=cat("≥",put(strip(&CHOLRES0),10.)); end;
+278        	if varname = "CRPRESU0" then do; temp=9; cutoff=cat("≥",put(strip(&CRPRESU0),6.2)); end;
+279        	if varname = "DHAS0" then do; temp=10; cutoff=cat('≤',put(strip(&DHAS0),6.2)); end;
+280        	if varname = "DIABP10" then do; temp=2; cutoff=cat("≥",put(strip(&DIABP10),6.2)); end;
+281        	if varname = "GLUCRES0" then do; temp=7; cutoff=cat("≥",put(strip(&GLUCRES0),6.2)); end;
+282        	if varname = "HDLRESU0" then do; temp=4; cutoff=cat("≤",put(strip(&HDLRESU0),6.2)); end;
+283        	if varname = "SYSBP10" then do; temp=1; cutoff=cat("≥",put(strip(&SYSBP10),6.2)); end;
+37                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+284        	if varname = "TRIGRES0" then do; temp=8; cutoff=cat("≥",put(strip(&TRIGRES0),6.2)); end;
+285        	if varname = "WHRATIO0" then do; temp=6; cutoff=cat("≥",put(strip(&WHRATIO0),4.2)); end;
+286        	if varname = "alscore0" then do; temp=11; end;
+287        	drop max med min mean std minabr maxabr;
+288        run;
+
+NOTE: Numeric values have been converted to character values at the places given by: (Line):(Column).
+      276:1   277:1   278:1   279:1   280:1   281:1   282:1   283:1   284:1   285:1   
+NOTE: There were 11 observations read from the data set WORK.QUANTRANS2.
+NOTE: There were 11 observations read from the data set WORK.BASESTATS2.
+NOTE: The data set WORK.TABLE1 has 11 observations and 7 variables.
+NOTE: At least one W.D format was too small for the number to be printed. The decimal may be shifted by the "BEST" format.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              1355.71k
+      OS Memory           48048.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        74  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     260
+      Page Swaps                        0
+      Voluntary Context Switches        10
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+289        
+290        data tablelabels ;
+291        	length varname $20;
+292        	input varname $ temp;
+293        	datalines;
+
+NOTE: The data set WORK.TABLELABELS has 4 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.01 seconds
+      memory              530.06k
+      OS Memory           47528.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        75  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     111
+      Page Swaps                        0
+      Voluntary Context Switches        14
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+298        ;
+299        
+300        proc sort data=table1; by varname; run;
+
+NOTE: There were 11 observations read from the data set WORK.TABLE1.
+38                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+NOTE: The data set WORK.TABLE1 has 11 observations and 7 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              780.53k
+      OS Memory           47532.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        76  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     116
+      Page Swaps                        0
+      Voluntary Context Switches        10
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+301        proc sort data=tablelabels; by varname; run;
+
+NOTE: There were 4 observations read from the data set WORK.TABLELABELS.
+NOTE: The data set WORK.TABLELABELS has 4 observations and 2 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              793.34k
+      OS Memory           47532.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        77  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     117
+      Page Swaps                        0
+      Voluntary Context Switches        9
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+302        
+303        data table1final; length varname $20; merge table1 tablelabels; by varname; run;
+
+NOTE: There were 11 observations read from the data set WORK.TABLE1.
+NOTE: There were 4 observations read from the data set WORK.TABLELABELS.
+NOTE: The data set WORK.TABLE1FINAL has 15 observations and 7 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              1246.03k
+      OS Memory           48048.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        78  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     176
+      Page Swaps                        0
+      Voluntary Context Switches        10
+      Involuntary Context Switches      0
+39                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+304        
+305        proc sort data=table1final; by temp; run;
+
+NOTE: There were 15 observations read from the data set WORK.TABLE1FINAL.
+NOTE: The data set WORK.TABLE1FINAL has 15 observations and 7 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              780.37k
+      OS Memory           47532.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        79  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     115
+      Page Swaps                        0
+      Voluntary Context Switches        9
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           272
+      
+
+306        
+307        proc format;
+308        	
+308      !  value $varnamelabel
+309        		'SYSBP10' = 'Systolic blood pressure (mm Hg)'
+310        		'DIABP10' = 'Diastolic blood pressure (mm Hg)'
+311        		'CHOLRES0' = 'Total cholesterol (mg/dL)'
+312        		'HDLRESU0' = 'HDL (mg/dL)'
+313        		'BMI0' = 'BMI (kg/m2)'
+314        		'WHRATIO0' = 'WHR'
+315        		'GLUCRES0' = 'Glucose (mg/dL)'
+316        		'TRIGRES0' = 'Triglycerides (mg/dL)'
+317        		'CRPRESU0' = 'CRP (mg/L)'
+318        		'DHAS0' = 'DHEA-S (μg/dL)'
+319        		'alscore0' = 'AL';
+NOTE: Format $VARNAMELABEL has been output.
+320        run;
+
+NOTE: PROCEDURE FORMAT used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.01 seconds
+      memory              165.96k
+      OS Memory           47012.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        80  Switch Count  0
+      Page Faults                       0
+      Page Reclaims                     67
+      Page Swaps                        0
+      Voluntary Context Switches        0
+      Involuntary Context Switches      0
+      Block Input Operations            0
+40                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      Block Output Operations           16
+      
+
+321        
+322        proc report data=table1final;
+323        	title 'Table 1. Biomarker and AL Distribution at Baseline, SWAN (n = 2,320)';
+324        	columns varname avg fiftyqt minmax stdv cutoff;
+325        	define varname / ' ' format = $varnamelabel.;
+326        	define avg / 'Mean';
+327        	define fiftyqt / 'Median';
+328        	define minmax / 'Range';
+329        	define stdv / 'SD';
+330        	define cutoff / 'Quartile Cutoff Value';
+331        	compute varname;
+332        		if varname='Cardiovascular' or varname='Metabolic' or varname='Inflammatory' or varname='Neuroendocrine' then do;
+333        			call define(_row_,"style", "style=[font_weight=bold]");
+334        		end;
+335        	endcomp;
+336        	footnote "Abbreviations: AL, allostatic load; BMI, body mass index; CRP, C-reactive protein; DHEA-S,
+336      ! dehydroepiandrosterone; HDL, high-density lipoprotein cholesterol; SD, standard deviation; SWAN, Study of Women's Health
+336      ! Across the Nation; WHR, waist-to-hip ratio.";
+337        run;
+
+NOTE: There were 15 observations read from the data set WORK.TABLE1FINAL.
+NOTE: PROCEDURE REPORT used (Total process time):
+      real time           0.06 seconds
+      user cpu time       0.06 seconds
+      system cpu time     0.00 seconds
+      memory              8693.71k
+      OS Memory           54964.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        81  Switch Count  3
+      Page Faults                       0
+      Page Reclaims                     2243
+      Page Swaps                        0
+      Voluntary Context Switches        32
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           32
+      
+
+338        
+339        * Create figure 1;
+340        ods exclude all;
+341        proc means data=finalanalytic mean clm alpha=0.05; var ALSCORE0; ods output summary=mean0; run;
+NOTE: The data set WORK.MEAN0 has 1 observations and 3 variables.
+NOTE: There were 2320 observations read from the data set WORK.FINALANALYTIC.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.01 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.01 seconds
+      memory              8558.40k
+      OS Memory           57040.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        82  Switch Count  4
+      Page Faults                       0
+      Page Reclaims                     1912
+      Page Swaps                        0
+41                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      Voluntary Context Switches        37
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           272
+      
+
+342        proc means data=finalanalytic mean clm alpha=0.05; var ALSCORE1; ods output summary=mean1; run;
+NOTE: The data set WORK.MEAN1 has 1 observations and 3 variables.
+NOTE: There were 2320 observations read from the data set WORK.FINALANALYTIC.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.01 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.01 seconds
+      memory              8554.96k
+      OS Memory           57040.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        83  Switch Count  4
+      Page Faults                       0
+      Page Reclaims                     1868
+      Page Swaps                        0
+      Voluntary Context Switches        34
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+343        proc means data=finalanalytic mean clm alpha=0.05; var ALSCORE3; ods output summary=mean3; run;
+NOTE: The data set WORK.MEAN3 has 1 observations and 3 variables.
+NOTE: There were 2320 observations read from the data set WORK.FINALANALYTIC.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.01 seconds
+      memory              8552.15k
+      OS Memory           57040.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        84  Switch Count  4
+      Page Faults                       0
+      Page Reclaims                     1866
+      Page Swaps                        0
+      Voluntary Context Switches        36
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+344        proc means data=finalanalytic mean clm alpha=0.05; var ALSCORE4; ods output summary=mean4; run;
+NOTE: The data set WORK.MEAN4 has 1 observations and 3 variables.
+NOTE: There were 2320 observations read from the data set WORK.FINALANALYTIC.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              8553.06k
+      OS Memory           57040.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        85  Switch Count  4
+      Page Faults                       0
+42                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      Page Reclaims                     1865
+      Page Swaps                        0
+      Voluntary Context Switches        33
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+345        proc means data=finalanalytic mean clm alpha=0.05; var ALSCORE5; ods output summary=mean5; run;
+NOTE: The data set WORK.MEAN5 has 1 observations and 3 variables.
+NOTE: There were 2320 observations read from the data set WORK.FINALANALYTIC.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.01 seconds
+      memory              8553.78k
+      OS Memory           57040.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        86  Switch Count  4
+      Page Faults                       0
+      Page Reclaims                     1866
+      Page Swaps                        0
+      Voluntary Context Switches        35
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+346        proc means data=finalanalytic mean clm alpha=0.05; var ALSCORE6; ods output summary=mean6; run;
+NOTE: The data set WORK.MEAN6 has 1 observations and 3 variables.
+NOTE: There were 2320 observations read from the data set WORK.FINALANALYTIC.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              8554.65k
+      OS Memory           57040.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        87  Switch Count  4
+      Page Faults                       0
+      Page Reclaims                     1867
+      Page Swaps                        0
+      Voluntary Context Switches        32
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+347        proc means data=finalanalytic mean clm alpha=0.05; var ALSCORE7; ods output summary=mean7; run;
+NOTE: The data set WORK.MEAN7 has 1 observations and 3 variables.
+NOTE: There were 2320 observations read from the data set WORK.FINALANALYTIC.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.01 seconds
+      memory              8554.34k
+      OS Memory           57040.00k
+      Timestamp           05/08/2023 11:16:38 PM
+43                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      Step Count                        88  Switch Count  4
+      Page Faults                       0
+      Page Reclaims                     1865
+      Page Swaps                        0
+      Voluntary Context Switches        33
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+348        ods exclude none;
+349        
+350        data mean0; set mean0; visit=0; mean=alscore0_mean; upper=alscore0_uclm; lower=alscore0_lclm; keep visit mean upper lower
+350      ! ; run;
+
+NOTE: There were 1 observations read from the data set WORK.MEAN0.
+NOTE: The data set WORK.MEAN0 has 1 observations and 4 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              798.90k
+      OS Memory           50092.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        89  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     137
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+351        data mean1; set mean1; visit=1; mean=alscore1_mean; upper=alscore1_uclm; lower=alscore1_lclm; keep visit mean upper lower
+351      ! ; run;
+
+NOTE: There were 1 observations read from the data set WORK.MEAN1.
+NOTE: The data set WORK.MEAN1 has 1 observations and 4 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              799.65k
+      OS Memory           50092.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        90  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     129
+      Page Swaps                        0
+      Voluntary Context Switches        9
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+352        data mean3; set mean3; visit=3; mean=alscore3_mean; upper=alscore3_uclm; lower=alscore3_lclm; keep visit mean upper lower
+352      ! ; run;
+44                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+
+NOTE: There were 1 observations read from the data set WORK.MEAN3.
+NOTE: The data set WORK.MEAN3 has 1 observations and 4 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.01 seconds
+      memory              800.78k
+      OS Memory           50092.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        91  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     129
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+353        data mean4; set mean4; visit=4; mean=alscore4_mean; upper=alscore4_uclm; lower=alscore4_lclm; keep visit mean upper lower
+353      ! ; run;
+
+NOTE: There were 1 observations read from the data set WORK.MEAN4.
+NOTE: The data set WORK.MEAN4 has 1 observations and 4 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              799.65k
+      OS Memory           50092.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        92  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     131
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+354        data mean5; set mean5; visit=5; mean=alscore5_mean; upper=alscore5_uclm; lower=alscore5_lclm; keep visit mean upper lower
+354      ! ; run;
+
+NOTE: There were 1 observations read from the data set WORK.MEAN5.
+NOTE: The data set WORK.MEAN5 has 1 observations and 4 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              800.78k
+      OS Memory           50092.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        93  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     129
+      Page Swaps                        0
+45                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+355        data mean6; set mean6; visit=6; mean=alscore6_mean; upper=alscore6_uclm; lower=alscore6_lclm; keep visit mean upper lower
+355      ! ; run;
+
+NOTE: There were 1 observations read from the data set WORK.MEAN6.
+NOTE: The data set WORK.MEAN6 has 1 observations and 4 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              799.65k
+      OS Memory           50092.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        94  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     131
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+356        data mean7; set mean7; visit=7; mean=alscore7_mean; upper=alscore7_uclm; lower=alscore7_lclm; keep visit mean upper lower
+356      ! ; run;
+
+NOTE: There were 1 observations read from the data set WORK.MEAN7.
+NOTE: The data set WORK.MEAN7 has 1 observations and 4 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              800.78k
+      OS Memory           50092.00k
+      Timestamp           05/08/2023 11:16:38 PM
+      Step Count                        95  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     129
+      Page Swaps                        0
+      Voluntary Context Switches        13
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+357        data meanal; set mean0 mean1 mean3 mean4 mean5 mean6 mean7; meanabr = put(mean,5.2); run;
+
+NOTE: There were 1 observations read from the data set WORK.MEAN0.
+NOTE: There were 1 observations read from the data set WORK.MEAN1.
+NOTE: There were 1 observations read from the data set WORK.MEAN3.
+NOTE: There were 1 observations read from the data set WORK.MEAN4.
+NOTE: There were 1 observations read from the data set WORK.MEAN5.
+NOTE: There were 1 observations read from the data set WORK.MEAN6.
+46                                                         The SAS System                           Monday, May  8, 2023 07:16:38 PM
+
+NOTE: There were 1 observations read from the data set WORK.MEAN7.
+NOTE: The data set WORK.MEANAL has 7 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              2628.75k
+      OS Memory           51652.00k
+      Timestamp           05/08/2023 11:16:39 PM
+      Step Count                        96  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     345
+      Page Swaps                        0
+      Voluntary Context Switches        11
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+358        
+359        proc sgplot data=meanal NOAUTOLEGEND;
+360        	title "Figure 1. Mean allostatic load by wave, Study of Women's Health Across the Nation (SWAN).";
+NOTE: The quoted string currently being processed has become more than 262 bytes long.  You might have unbalanced quotation marks.
+361        	vbarparm category=visit response=mean / fillattrs=(color=lightgrey) datalabel=meanabr datalabelpos=bottom;
+362        	highlow x=visit low=lower high=upper/ HIGHCAP=SERIF LOWCAP=SERIF lineattrs=(color=black);
+363        	yaxis label='Mean Allostatic Load' values=(2.2 to 3.1 by 0.1);
+364        	xaxis label='Follow-up visit';
+365        	footnote "Allostatic load score was based on systolic and diastolic blood pressure, C-reactive protein, high-density
+365      ! lipoprotein (HDL) cholesterol, total cholesterol, body mass index, waist-hip ratio, fasting serum glucose, triglycerides,
+365      !  and dehydroepiandrosterone (DHEA-S) values. Values equal or greater than the 75th percentile were defined as high risk
+365      ! for all biomarkers, except for HDL and DHEA-S, which values equal or lesser than the 25th percentile defined as high
+365      ! risk.";
+366        run;
+
+NOTE: Since no format is assigned, the numeric category variable will use the default of BEST6.
+NOTE: PROCEDURE SGPLOT used (Total process time):
+      real time           2.70 seconds
+      user cpu time       0.12 seconds
+      system cpu time     0.04 seconds
+      memory              20460.23k
+      OS Memory           67496.00k
+      Timestamp           05/08/2023 11:16:41 PM
+      Step Count                        97  Switch Count  3
+      Page Faults                       0
+      Page Reclaims                     6331
+      Page Swaps                        0
+      Voluntary Context Switches        488
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           1016
+      
+NOTE: There were 7 observations read from the data set WORK.MEANAL.
+
+367        
+368        * Create final visualization - mean AL score by race across waves;
+369        proc sql;
+370        	create table raceal as
+371        	select a.*, b.race
+47                                                         The SAS System                           Monday, May  8, 2023 07:16:41 PM
+
+372        	from finalanalytic as a
+373        		left join data.baseline as b
+374        		on a.swanid=b.swanid;
+NOTE: Table WORK.RACEAL created, with 2320 rows and 100 columns.
+
+375        quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           0.03 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.02 seconds
+      memory              56658.18k
+      OS Memory           123828.00k
+      Timestamp           05/08/2023 11:16:41 PM
+      Step Count                        98  Switch Count  5
+      Page Faults                       0
+      Page Reclaims                     2338
+      Page Swaps                        0
+      Voluntary Context Switches        85
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           6432
+      
+
+376        
+377        proc sort data=raceal; by race; run;
+
+NOTE: There were 2320 observations read from the data set WORK.RACEAL.
+NOTE: The data set WORK.RACEAL has 2320 observations and 100 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              4334.34k
+      OS Memory           73148.00k
+      Timestamp           05/08/2023 11:16:41 PM
+      Step Count                        99  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     791
+      Page Swaps                        0
+      Voluntary Context Switches        13
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           3848
+      
+
+378        proc means data=raceal mean clm alpha=0.05; var ALSCORE0; by race; ods output summary=meanrace0; run;
+NOTE: The data set WORK.MEANRACE0 has 5 observations and 4 variables.
+NOTE: There were 2320 observations read from the data set WORK.RACEAL.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.05 seconds
+      user cpu time       0.05 seconds
+      system cpu time     0.01 seconds
+      memory              4236.87k
+      OS Memory           72112.00k
+      Timestamp           05/08/2023 11:16:41 PM
+      Step Count                        100  Switch Count  7
+      Page Faults                       0
+      Page Reclaims                     545
+48                                                         The SAS System                           Monday, May  8, 2023 07:16:41 PM
+
+      Page Swaps                        0
+      Voluntary Context Switches        29
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           272
+      
+
+379        proc means data=raceal mean clm alpha=0.05; var ALSCORE1; by race; ods output summary=meanrace1; run;
+NOTE: The data set WORK.MEANRACE1 has 5 observations and 4 variables.
+NOTE: There were 2320 observations read from the data set WORK.RACEAL.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.04 seconds
+      user cpu time       0.05 seconds
+      system cpu time     0.00 seconds
+      memory              4166.96k
+      OS Memory           72880.00k
+      Timestamp           05/08/2023 11:16:41 PM
+      Step Count                        101  Switch Count  8
+      Page Faults                       0
+      Page Reclaims                     588
+      Page Swaps                        0
+      Voluntary Context Switches        28
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           288
+      
+
+380        proc means data=raceal mean clm alpha=0.05; var ALSCORE3; by race; ods output summary=meanrace3; run;
+NOTE: The data set WORK.MEANRACE3 has 5 observations and 4 variables.
+NOTE: There were 2320 observations read from the data set WORK.RACEAL.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.04 seconds
+      user cpu time       0.05 seconds
+      system cpu time     0.00 seconds
+      memory              4014.75k
+      OS Memory           73648.00k
+      Timestamp           05/08/2023 11:16:41 PM
+      Step Count                        102  Switch Count  8
+      Page Faults                       0
+      Page Reclaims                     618
+      Page Swaps                        0
+      Voluntary Context Switches        30
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           296
+      
+
+381        proc means data=raceal mean clm alpha=0.05; var ALSCORE4; by race; ods output summary=meanrace4; run;
+NOTE: The data set WORK.MEANRACE4 has 5 observations and 4 variables.
+NOTE: There were 2320 observations read from the data set WORK.RACEAL.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.04 seconds
+      user cpu time       0.05 seconds
+      system cpu time     0.00 seconds
+      memory              4117.53k
+      OS Memory           74416.00k
+      Timestamp           05/08/2023 11:16:41 PM
+      Step Count                        103  Switch Count  8
+49                                                         The SAS System                           Monday, May  8, 2023 07:16:41 PM
+
+      Page Faults                       0
+      Page Reclaims                     614
+      Page Swaps                        0
+      Voluntary Context Switches        30
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           280
+      
+
+382        proc means data=raceal mean clm alpha=0.05; var ALSCORE5; by race; ods output summary=meanrace5; run;
+NOTE: The data set WORK.MEANRACE5 has 5 observations and 4 variables.
+NOTE: There were 2320 observations read from the data set WORK.RACEAL.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.04 seconds
+      user cpu time       0.05 seconds
+      system cpu time     0.01 seconds
+      memory              4006.96k
+      OS Memory           74928.00k
+      Timestamp           05/08/2023 11:16:41 PM
+      Step Count                        104  Switch Count  8
+      Page Faults                       0
+      Page Reclaims                     608
+      Page Swaps                        0
+      Voluntary Context Switches        27
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           288
+      
+
+383        proc means data=raceal mean clm alpha=0.05; var ALSCORE6; by race; ods output summary=meanrace6; run;
+NOTE: The data set WORK.MEANRACE6 has 5 observations and 4 variables.
+NOTE: There were 2320 observations read from the data set WORK.RACEAL.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.04 seconds
+      user cpu time       0.04 seconds
+      system cpu time     0.00 seconds
+      memory              4131.15k
+      OS Memory           75696.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        105  Switch Count  8
+      Page Faults                       0
+      Page Reclaims                     618
+      Page Swaps                        0
+      Voluntary Context Switches        31
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           296
+      
+
+384        proc means data=raceal mean clm alpha=0.05; var ALSCORE7; by race; ods output summary=meanrace7; run;
+NOTE: The data set WORK.MEANRACE7 has 5 observations and 4 variables.
+NOTE: There were 2320 observations read from the data set WORK.RACEAL.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.04 seconds
+      user cpu time       0.04 seconds
+      system cpu time     0.00 seconds
+      memory              4004.37k
+      OS Memory           76464.00k
+50                                                         The SAS System                           Monday, May  8, 2023 07:16:42 PM
+
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        106  Switch Count  8
+      Page Faults                       0
+      Page Reclaims                     616
+      Page Swaps                        0
+      Voluntary Context Switches        31
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           280
+      
+
+385        
+386        data meanrace0; set meanrace0; visit=0; mean=alscore0_mean; upper=alscore0_uclm; lower=alscore0_lclm; keep visit race
+386      ! mean upper lower; run;
+
+NOTE: There were 5 observations read from the data set WORK.MEANRACE0.
+NOTE: The data set WORK.MEANRACE0 has 5 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.01 seconds
+      memory              812.25k
+      OS Memory           74668.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        107  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     134
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+387        data meanrace1; set meanrace1; visit=1; mean=alscore1_mean; upper=alscore1_uclm; lower=alscore1_lclm; keep visit race
+387      ! mean upper lower; run;
+
+NOTE: There were 5 observations read from the data set WORK.MEANRACE1.
+NOTE: The data set WORK.MEANRACE1 has 5 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              808.75k
+      OS Memory           74668.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        108  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     127
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+388        data meanrace3; set meanrace3; visit=3; mean=alscore3_mean; upper=alscore3_uclm; lower=alscore3_lclm; keep visit race
+388      ! mean upper lower; run;
+51                                                         The SAS System                           Monday, May  8, 2023 07:16:42 PM
+
+
+NOTE: There were 5 observations read from the data set WORK.MEANRACE3.
+NOTE: The data set WORK.MEANRACE3 has 5 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              809.56k
+      OS Memory           74668.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        109  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     129
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+389        data meanrace4; set meanrace4; visit=4; mean=alscore4_mean; upper=alscore4_uclm; lower=alscore4_lclm; keep visit race
+389      ! mean upper lower; run;
+
+NOTE: There were 5 observations read from the data set WORK.MEANRACE4.
+NOTE: The data set WORK.MEANRACE4 has 5 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              813.15k
+      OS Memory           74668.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        110  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     129
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+390        data meanrace5; set meanrace5; visit=5; mean=alscore5_mean; upper=alscore5_uclm; lower=alscore5_lclm; keep visit race
+390      ! mean upper lower; run;
+
+NOTE: There were 5 observations read from the data set WORK.MEANRACE5.
+NOTE: The data set WORK.MEANRACE5 has 5 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              809.56k
+      OS Memory           74668.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        111  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     129
+      Page Swaps                        0
+52                                                         The SAS System                           Monday, May  8, 2023 07:16:42 PM
+
+      Voluntary Context Switches        11
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+391        data meanrace6; set meanrace6; visit=6; mean=alscore6_mean; upper=alscore6_uclm; lower=alscore6_lclm; keep visit race
+391      ! mean upper lower; run;
+
+NOTE: There were 5 observations read from the data set WORK.MEANRACE6.
+NOTE: The data set WORK.MEANRACE6 has 5 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              813.15k
+      OS Memory           74668.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        112  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     129
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+392        data meanrace7; set meanrace7; visit=7; mean=alscore7_mean; upper=alscore7_uclm; lower=alscore7_lclm; keep visit race
+392      ! mean upper lower; run;
+
+NOTE: There were 5 observations read from the data set WORK.MEANRACE7.
+NOTE: The data set WORK.MEANRACE7 has 5 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.01 seconds
+      system cpu time     0.00 seconds
+      memory              809.56k
+      OS Memory           74668.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        113  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     129
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+393        data meanraceal; set meanrace0 meanrace1 meanrace3 meanrace4 meanrace5 meanrace6 meanrace7; meanabr = put(mean,5.2); run;
+
+NOTE: There were 5 observations read from the data set WORK.MEANRACE0.
+NOTE: There were 5 observations read from the data set WORK.MEANRACE1.
+NOTE: There were 5 observations read from the data set WORK.MEANRACE3.
+NOTE: There were 5 observations read from the data set WORK.MEANRACE4.
+NOTE: There were 5 observations read from the data set WORK.MEANRACE5.
+NOTE: There were 5 observations read from the data set WORK.MEANRACE6.
+53                                                         The SAS System                           Monday, May  8, 2023 07:16:42 PM
+
+NOTE: There were 5 observations read from the data set WORK.MEANRACE7.
+NOTE: The data set WORK.MEANRACEAL has 35 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              2621.37k
+      OS Memory           76228.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        114  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     348
+      Page Swaps                        0
+      Voluntary Context Switches        12
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           272
+      
+
+394        
+395        proc format;
+396        	
+396      !  value racelabel
+397        		1='Black'
+398        		2='Chinese'
+399        		3='Japanese'
+400        		4='White'
+401        		5='Hispanic';
+NOTE: Format RACELABEL has been output.
+402        run;
+
+NOTE: PROCEDURE FORMAT used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              102.96k
+      OS Memory           74148.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        115  Switch Count  0
+      Page Faults                       0
+      Page Reclaims                     15
+      Page Swaps                        0
+      Voluntary Context Switches        0
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           8
+      
+
+403        
+404        data meanraceal; set meanraceal; format race racelabel.; run;
+
+NOTE: There were 35 observations read from the data set WORK.MEANRACEAL.
+NOTE: The data set WORK.MEANRACEAL has 35 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      user cpu time       0.00 seconds
+      system cpu time     0.00 seconds
+      memory              817.06k
+54                                                         The SAS System                           Monday, May  8, 2023 07:16:42 PM
+
+      OS Memory           74668.00k
+      Timestamp           05/08/2023 11:16:42 PM
+      Step Count                        116  Switch Count  2
+      Page Faults                       0
+      Page Reclaims                     128
+      Page Swaps                        0
+      Voluntary Context Switches        13
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           264
+      
+
+405        		
+406        proc sgpanel data=meanraceal NOAUTOLEGEND;
+407        	title "Figure 2. Mean allostatic load by wave and race, Study of Women's Health Across the Nation (SWAN).";
+408        	panelby race;
+409        	vbarparm category=visit response=mean / fillattrs=(color=lightgrey);
+410        	highlow x=visit low=lower high=upper/ HIGHCAP=SERIF LOWCAP=SERIF lineattrs=(color=black);
+411        	rowaxis label='Mean Allostatic Load' ;
+412        	colaxis label='Follow-up visit';
+413        run;
+
+NOTE: Since no format is assigned, the numeric category variable will use the default of BEST6.
+NOTE: PROCEDURE SGPANEL used (Total process time):
+      real time           0.97 seconds
+      user cpu time       0.09 seconds
+      system cpu time     0.02 seconds
+      memory              4502.87k
+      OS Memory           77492.00k
+      Timestamp           05/08/2023 11:16:43 PM
+      Step Count                        117  Switch Count  15
+      Page Faults                       0
+      Page Reclaims                     1666
+      Page Swaps                        0
+      Voluntary Context Switches        351
+      Involuntary Context Switches      0
+      Block Input Operations            0
+      Block Output Operations           1800
+      
+NOTE: There were 35 observations read from the data set WORK.MEANRACEAL.
+
+414        
+415        
+416        OPTIONS NONOTES NOSTIMER NOSOURCE NOSYNTAXCHECK;
